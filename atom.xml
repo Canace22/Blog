@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Canace 的博客</title>
   
-  <subtitle>Tomorrow is another day</subtitle>
+  <subtitle>好记性不如烂笔头，坐在岸上学不会游泳</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-05-17T05:58:32.186Z</updated>
+  <updated>2020-05-18T01:53:18.392Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>递归树</title>
+    <link href="https://canace.site/2020/05/18/%E9%80%92%E5%BD%92%E6%A0%91/"/>
+    <id>https://canace.site/2020/05/18/%E9%80%92%E5%BD%92%E6%A0%91/</id>
+    <published>2020-05-18T01:16:57.000Z</published>
+    <updated>2020-05-18T01:53:18.392Z</updated>
+    
+    <summary type="html">
+    
+      有一个书本列表，书本包括章节，章节下面有子章节，子章节下面还可能有子章节，要把这些 name 一个个串联起来, 章节末端会有练习题，即 content2 字段内容，把 name 串起来之后，需要把习题塞到末端章节里，注意，第一层的单元名称需要去除
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="https://canace.site/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitbook 生成电子书</title>
@@ -418,27 +439,6 @@
     
     
       <category term="vscode" scheme="https://canace.site/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于以往经验的基础知识整理</title>
-    <link href="https://canace.site/2020/03/29/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/"/>
-    <id>https://canace.site/2020/03/29/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</id>
-    <published>2020-03-29T04:08:32.000Z</published>
-    <updated>2020-05-15T03:20:49.925Z</updated>
-    
-    <summary type="html">
-    
-      根据项目经验，整理的前端基础知识文稿
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="经验" scheme="https://canace.site/tags/%E7%BB%8F%E9%AA%8C/"/>
     
   </entry>
   
