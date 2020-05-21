@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-05-20T02:26:03.233Z</updated>
+  <updated>2020-05-21T01:51:05.266Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 常用代码片段</title>
+    <link href="https://canace.site/2020/05/21/JavaScript%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"/>
+    <id>https://canace.site/2020/05/21/JavaScript%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/</id>
+    <published>2020-05-21T01:13:35.000Z</published>
+    <updated>2020-05-21T01:51:05.266Z</updated>
+    
+    <summary type="html">
+    
+      在工作中，无论是业务逻辑处理还是数据操作，避免不了出现同样的代码片段，有的时候可能一时想不起来，需要想半天，这里做一个整理
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Css Background-Image 的应用</title>
@@ -412,27 +433,6 @@
     
     
       <category term="经验" scheme="https://canace.site/tags/%E7%BB%8F%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Axios网络请求封装</title>
-    <link href="https://canace.site/2020/03/31/axios%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/"/>
-    <id>https://canace.site/2020/03/31/axios%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E5%B0%81%E8%A3%85/</id>
-    <published>2020-03-31T02:10:02.000Z</published>
-    <updated>2020-05-15T03:20:49.912Z</updated>
-    
-    <summary type="html">
-    
-      axios 是网页请求库中的新星，经常会看到他与 vue 携手，该库对 http 请求已经封装得很好了，但是，由于我需要一些更加定制化的操作，比如加密请求参数等，所以这里进行了二次封装。
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="http" scheme="https://canace.site/tags/http/"/>
     
   </entry>
   
