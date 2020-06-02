@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-05-25T01:35:16.348Z</updated>
+  <updated>2020-06-02T01:20:03.305Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序踩坑集合</title>
+    <link href="https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
+    <id>https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
+    <published>2020-06-02T01:03:48.000Z</published>
+    <updated>2020-06-02T01:20:03.305Z</updated>
+    
+    <summary type="html">
+    
+      微信小程序踩坑集合
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="小程序" scheme="https://canace.site/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Proxy 实现观察者模式</title>
+    <link href="https://canace.site/2020/05/28/proxy%E5%AE%9E%E7%8E%B0%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://canace.site/2020/05/28/proxy%E5%AE%9E%E7%8E%B0%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-05-28T02:11:14.000Z</published>
+    <updated>2020-05-28T03:13:24.219Z</updated>
+    
+    <summary type="html">
+    
+      使用 es6 Proxy 实现观察者模式
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter学习笔记————Dart基础</title>
@@ -391,48 +433,6 @@
     
     
       <category term="webpack" scheme="https://canace.site/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS 定位</title>
-    <link href="https://canace.site/2020/04/02/css%E5%AE%9A%E4%BD%8D/"/>
-    <id>https://canace.site/2020/04/02/css%E5%AE%9A%E4%BD%8D/</id>
-    <published>2020-04-01T23:00:32.000Z</published>
-    <updated>2020-05-15T03:20:49.913Z</updated>
-    
-    <summary type="html">
-    
-      css 定位知识总结及 demo 展示
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="css" scheme="https://canace.site/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>首屏时间(FCP) vs 白屏时间(FP)</title>
-    <link href="https://canace.site/2020/04/01/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4vs%E7%99%BD%E5%B1%8F%E6%97%B6%E9%97%B4/"/>
-    <id>https://canace.site/2020/04/01/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4vs%E7%99%BD%E5%B1%8F%E6%97%B6%E9%97%B4/</id>
-    <published>2020-04-01T00:58:25.000Z</published>
-    <updated>2020-05-15T03:20:49.934Z</updated>
-    
-    <summary type="html">
-    
-      最近发现做了这么多的首屏优化，一直都是把白屏时间((FP))和首屏(FCP)时间算在一起，也就是页面打开之前 dom 没渲染出来，我就把他归为首屏时间。时间上这里专业点可以分为首屏和白屏两个阶段，这篇文章就讲讲二者的区别，以及计算方法。
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="性能优化" scheme="https://canace.site/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
