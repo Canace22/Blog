@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-06-02T01:20:03.305Z</updated>
+  <updated>2020-06-18T02:11:41.030Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,15 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>微信小程序踩坑集合</title>
-    <link href="https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
-    <id>https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
-    <published>2020-06-02T01:03:48.000Z</published>
-    <updated>2020-06-02T01:20:03.305Z</updated>
+    <title>CommonJS、AMD、RequireJS、CMD 以及 ES6 规范比较</title>
+    <link href="https://canace.site/2020/06/18/%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/"/>
+    <id>https://canace.site/2020/06/18/%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/</id>
+    <published>2020-06-18T02:02:46.000Z</published>
+    <updated>2020-06-18T02:11:41.030Z</updated>
     
     <summary type="html">
     
-      微信小程序踩坑集合
+      CommonJS、AMD、RequireJS、CMD 以及 ES6 规范比较
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序小技巧</title>
+    <link href="https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
+    <id>https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
+    <published>2020-06-02T01:03:48.000Z</published>
+    <updated>2020-06-18T02:04:04.266Z</updated>
+    
+    <summary type="html">
+    
+      这段时间在公司的微信小程序项目，由于项目比较大，也基本涉及到了很多小程序的很多方面，媒体，网络请求自定义 tabBar 等等，其中遇到了一些坑，也封装了一些东西，在这里记录一下
     
     </summary>
     
@@ -412,27 +433,6 @@
     
     
       <category term="PixiJs" scheme="https://canace.site/tags/PixiJs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Webpack5 新特性 - 模块联邦笔记</title>
-    <link href="https://canace.site/2020/04/03/Webpack5%E6%96%B0%E7%89%B9%E6%80%A7-%E6%A8%A1%E5%9D%97%E8%81%94%E9%82%A6%E7%AC%94%E8%AE%B0/"/>
-    <id>https://canace.site/2020/04/03/Webpack5%E6%96%B0%E7%89%B9%E6%80%A7-%E6%A8%A1%E5%9D%97%E8%81%94%E9%82%A6%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-04-03T01:07:28.000Z</published>
-    <updated>2020-05-15T03:20:49.912Z</updated>
-    
-    <summary type="html">
-    
-      传统的模块共享方式有打包到 npm 共享，UMD 方式共享以及微前端方式共享等，但是这些方式都多少有点问题，Webpack5 新特性模块联邦就是为解决这些问题而生。
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="webpack" scheme="https://canace.site/tags/webpack/"/>
     
   </entry>
   
