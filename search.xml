@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>深入浅出Node笔记</title>
+      <link href="/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、Node-特点"><a href="#一、Node-特点" class="headerlink" title="一、Node 特点"></a>一、Node 特点</h3><p>1、异步 I/O（非阻塞 I/O)，任务耗时取决于最慢的事件耗时</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">'/path1'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, file</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'读取文件 1 完成'</span>)</span><br><span class="line">&#125;)</span><br><span class="line">fs.readFile(<span class="string">'/path2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err, file</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'读取文件 2 完成'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>2、大量使用事件和回调函数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 侦听服务器的 request 事件</span></span><br><span class="line">http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> postData = <span class="string">''</span>;</span><br><span class="line">  req.setEncoding(<span class="string">'utf-8'</span>);</span><br><span class="line">  <span class="comment">// 侦听请求的 data 事件</span></span><br><span class="line">  req.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">chunk</span>) </span>&#123;</span><br><span class="line">    postData += chunk;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 侦听请求的 end 事件</span></span><br><span class="line">  req.on(<span class="string">'end'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    res.end(postData);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;).listen(<span class="number">8080</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'服务器启动完成！'</span>);</span><br></pre></td></tr></table></figure><p>ps:<a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" target="_blank" rel="noopener">事件循环</a></p><p>3、单线程</p><p>(1) 单线程带来的问题</p><ul><li>无法利用多核 CPU</li><li>错误会引起整个应用退出，应用的健壮性值得考验</li><li>大量计算占用 CPU 导致无法继续调用异步 I/O</li></ul><p>(2) 解决大计算量问题的方法：child_process(子进程) 分解大量的计算，Master-Worker 管理子进程</p><p>4、跨平台，可以在 win、linux 等环境中部署 Node</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git 文档</title>
       <link href="/2020/06/18/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2020/06/18/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>

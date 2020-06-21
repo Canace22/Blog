@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-06-21T06:43:55.686Z</updated>
+  <updated>2020-06-21T14:34:29.342Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入浅出Node笔记</title>
+    <link href="https://canace.site/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/"/>
+    <id>https://canace.site/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-06-21T14:30:57.000Z</published>
+    <updated>2020-06-21T14:34:29.342Z</updated>
+    
+    <summary type="html">
+    
+      深入浅出 NodeJs 笔记
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Git 文档</title>
@@ -412,27 +433,6 @@
     
     
       <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PixiJs ———— 精灵加载去缓存</title>
-    <link href="https://canace.site/2020/04/06/pixi-js%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E7%B2%BE%E7%81%B5%E5%8A%A0%E8%BD%BD%E5%8E%BB%E7%BC%93%E5%AD%98/"/>
-    <id>https://canace.site/2020/04/06/pixi-js%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E7%B2%BE%E7%81%B5%E5%8A%A0%E8%BD%BD%E5%8E%BB%E7%BC%93%E5%AD%98/</id>
-    <published>2020-04-06T13:32:30.000Z</published>
-    <updated>2020-05-15T03:20:49.916Z</updated>
-    
-    <summary type="html">
-    
-      PixiJs v5.2.0 加载精灵的时候会有缓存相关的 warning，每次都九十多条 warning，这谁受得了，花了点时间，各种调试，终于把他们给去掉了，舒服。可能有人会问，直接 google cv 一条龙不就解决了，但是网上关于 PixiJs 的文档是很少的，官方文档看了看，开发论坛看了看，都说用 clearTextureCache 方法，但是，通过打印发现是在 load 阶段给出的 warning，所以这里没用。
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="PixiJs" scheme="https://canace.site/tags/PixiJs/"/>
     
   </entry>
   
