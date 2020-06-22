@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Git 安装配置及分支管理</title>
+      <link href="/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+      <url>/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、安装配置-Git"><a href="#一、安装配置-Git" class="headerlink" title="一、安装配置 Git"></a>一、安装配置 Git</h3><p>1、从官网下载安装包，手动完成安装。</p><p>2、打开 Git Bash 命令行工具，执行命令 ssh-keygen -t rsa -C Email-Addresss 生成一个密钥对。</p><p>3、 登录到 GitLab，点击右上角你的用户头像，点击 Edit Profile settings，点击 SSH Keys，点击 Add SSH Key，填写 Title 栏，复制用户目录下.ssh/id_rsa.pub 文件的内容到 Key，点击 Add Key。</p><p>4、 点击右上角的 New project，填写完成后点击 Create project 新建一个仓库，点击 Activity，点击 SSH 后复制 SSH 边上栏里的地址。</p><p>5、打开 Git Bash 命令行工具，切换到一个合适的目录，使用命令 git clone 刚才复制的 URL 克隆创建的仓库。</p><p>6、进入目录 cd 仓库名，执行命令 <code>git config user.email your-email</code> =&gt; <code>git config user.name your-name</code>，设置你的个人信息。</p><p>7、执行命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"#Description"</span> &gt; README.md <span class="comment">#添加一个文件</span></span><br><span class="line"></span><br><span class="line">git status <span class="comment">#查看当前状态，发现有未跟踪文件</span></span><br><span class="line"></span><br><span class="line">git add . <span class="comment">#当前目录所有文件添加到暂存区</span></span><br><span class="line"></span><br><span class="line">git diff <span class="comment"># 比较当前工作区和暂存区有何不同</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">"注释"</span> <span class="comment">#把暂存区内容提交到本地仓库</span></span><br><span class="line"></span><br><span class="line">git push -u origin develop <span class="comment">#把本地仓库的提交推送到远程仓库</span></span><br><span class="line"></span><br><span class="line">git <span class="built_in">log</span> <span class="comment">#查看提交日志</span></span><br></pre></td></tr></table></figure><h3 id="二、Git-本地分支管理"><a href="#二、Git-本地分支管理" class="headerlink" title="二、Git 本地分支管理"></a>二、Git 本地分支管理</h3><p>1、分支的创建、合并、删除</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git branch <span class="comment"># 显示所有分支</span></span><br><span class="line"></span><br><span class="line">git branch b1 <span class="comment"># 从当前分支创建一个叫 b1 的分支</span></span><br><span class="line"></span><br><span class="line">git checkout b1 <span class="comment"># 切换到 b1 分支</span></span><br><span class="line"></span><br><span class="line">git checkout -b b1 <span class="comment"># 相当于以上两条命令的组合</span></span><br><span class="line"></span><br><span class="line">git checkout master <span class="comment"># 切换到 master 主分支</span></span><br><span class="line"></span><br><span class="line">git merge b1 <span class="comment"># 把 b1 分支的代码合并到 master 上</span></span><br><span class="line"></span><br><span class="line">git branch -d b1 <span class="comment"># 删除 b1 分支，不能在被删除分支上执行</span></span><br></pre></td></tr></table></figure><h3 id="三、Git-Tag-标签管理"><a href="#三、Git-Tag-标签管理" class="headerlink" title="三、Git Tag 标签管理"></a>三、Git Tag 标签管理</h3><p>标签的创建、删除</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag t1 <span class="comment"># 从当前分支创建一个名为 t1 的标签</span></span><br><span class="line"></span><br><span class="line">git tag -d t1 <span class="comment">#删除名为 t1 的标签</span></span><br></pre></td></tr></table></figure><h3 id="三、GitLib-权限管理"><a href="#三、GitLib-权限管理" class="headerlink" title="三、GitLib 权限管理"></a>三、GitLib 权限管理</h3><ul><li><p>Owner 项目所有者，拥有所有的操作权限</p></li><li><p>Master 项目的管理者，除更改、删除项目元信息外其它操作均可</p></li><li><p>Developer 项目的开发人员，做一些开发工作，对受保护内容无权限</p></li><li><p>Reporter 项目的报告者，只有项目的读权限，可以创建代码片断</p></li><li><p>Guest 项目的游客，只能提交问题和评论内容</p></li></ul><p>具体参见 GitLab 权限，为项目添加成员时可指定成员的身份权限。</p><h3 id="四、为什么要有分支"><a href="#四、为什么要有分支" class="headerlink" title="四、为什么要有分支"></a>四、为什么要有分支</h3><p>建立分支的原因是 git 因为是分布式的，所以其核心就是分支，分支的意义在于，可以将项目代码按照功能、模块拆分成不同的分支。比如这个产品要加一个支付功能和一个登陆功能，可以创建两个分支，交给不同的开发人员并行开发。登陆功能先开发完，测试无误后合并该分支到 master 分支，master 分支部署上线。支付功能虽然没有开发完成，但是在另一条分支上，所以产品上线和功能开发完全不受影响。这才是分布式开发的高效模式。还有这样，以自己名字建立一个分支比如 xiancai，这个分支是已经做好的功能，随时可以合并到 master 上线，开发的时候，建立一个带功能前缀的分支，比如 xiancai-ninghao 、xiancai-ninghao 等等，开发完之后在合并到 xiancai，每次上线，把 xiancai 合并到 master 。总之分支的做重要的意义就是提高效率！！！ 这样方便团队开发，并且不会导致混乱。</p><h3 id="五、常见分支有如下几条："><a href="#五、常见分支有如下几条：" class="headerlink" title="五、常见分支有如下几条："></a>五、常见分支有如下几条：</h3><p>1、Master 主分支</p><p>2、Develop 分支</p><p>3、Feature 功能分支</p><p>4、Release 预发布分支</p><p>5、Hotfix（或者 Fixbug） 分支</p><p>其中对于 Feature 功能分支有:</p><ul><li><p>从哪个分支分离开来：develop</p></li><li><p>必须要合并到哪个分支上：develop</p></li><li><p>分支的命名规范：除了 master，develop，release-，或者 hotfix- 以外的名字都可以比如可以用 feature-*的方式命名。</p></li></ul><p>其中对于 Release 预发布分支有：</p><ul><li><p>从哪个分支分离开来： develop</p></li><li><p>必须要合并到哪个分支上：develop 与 master</p></li><li><p>分支的命名规范： release-*</p></li></ul><p>其中对于 Hotfix（或者 Fixbug） 分支有；</p><ul><li><p>从哪个分支分离开来：master</p></li><li><p>必须要合并到哪个分支上：develop 与 master</p></li><li><p>分支的命名规范：hotfix-_ 或者 fixbug-_</p></li></ul><h3 id="六、分支说明"><a href="#六、分支说明" class="headerlink" title="六、分支说明"></a>六、分支说明</h3><h4 id="1、Master-主分支"><a href="#1、Master-主分支" class="headerlink" title="1、Master 主分支"></a>1、Master 主分支</h4><p>首先，代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。Git 主分支的名字，默认叫做 Master。它是自动建立的，版本库初始化以后，默认就是在主分支在进行开发。</p><h4 id="2、Develop-分支"><a href="#2、Develop-分支" class="headerlink" title="2、Develop 分支"></a>2、Develop 分支</h4><p>主分支只用来发布重大版本，日常开发应该在另一条分支上完成。我们把开发用的分支，叫做 Develop。</p><p>(1) 创建分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch develop    <span class="comment">#只创建分支</span></span><br><span class="line">git checkout develop  <span class="comment">#创建并切换到 develop 分支</span></span><br></pre></td></tr></table></figure><p>(2) 合并分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master         <span class="comment">#切换到主分支</span></span><br><span class="line">git merge --no-ff develop   <span class="comment">#把 develop 合并到 master 分支，no-ff 选项的作用是保留原分支记录</span></span><br><span class="line">git branch -d develop       <span class="comment">#删除 develop 分支</span></span><br></pre></td></tr></table></figure><p>这里稍微解释一下，上一条命令的 –no-ff 参数是什么意思。默认情况下，Git执行”快进式合并”（fast-farward merge），会直接将 Master 分支指向 Develop 分支。</p><h4 id="3、次分支"><a href="#3、次分支" class="headerlink" title="3、次分支"></a>3、次分支</h4><p>除了 master 与 develop 这两个主分支，在开发时还可以创建一些次分支，目的是让团队不同的成员之间可以平行开发，更容易跟踪功能，准备为生产的发行版，快速修复生产上的问题等等。这些分支生命周期有限，可以在用完以后删掉他们。</p><h4 id="4、Feature-功能分支"><a href="#4、Feature-功能分支" class="headerlink" title="4、Feature 功能分支"></a>4、Feature 功能分支</h4><p>Feature（功能） 分支，有时候也叫 Topic 分支。在这种分支上去开发新的功能。当开发功能的时候，这个功能属于哪个目标发行还不知道。功能如果一直在开发，对应的这个功能分支就可以一直存在，不过到最后还是要合并到 develop 分支上，或者如果不想要开发的这个功能了，可以直接扔掉它。</p><p>功能名字的命名已经在上文中有提到。</p><p>创建一个功能分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature-x develop</span><br></pre></td></tr></table></figure><p>开发完成后，将功能分支合并到develop分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout develop</span><br><span class="line">git merge --no-ff feature-x</span><br></pre></td></tr></table></figure><p>删除feature分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d feature-x <span class="comment"># Release 预发布分支</span></span><br></pre></td></tr></table></figure><h4 id="5、Release-功能分支"><a href="#5、Release-功能分支" class="headerlink" title="5、Release 功能分支"></a>5、Release 功能分支</h4><p>它是指发布正式版本之前（即合并到Master分支之前），我们可能需要有一个预发布的版本进行测试。预发布分支是从Develop分支上面分出来的，预发布结束以后，必须合并进 Develop 和 Master 分支。它的命名，可以采用release-*的形式。</p><p>创建一个预发布分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b release-1.2 develop</span><br></pre></td></tr></table></figure><p>确认没有问题后，合并到master分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge --no-ff release-1.2</span><br></pre></td></tr></table></figure><p>对合并生成的新节点，做一个标签</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -a 1.2</span><br></pre></td></tr></table></figure><p>再合并到develop分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout develop</span><br><span class="line">git merge --no-ff release-1.2</span><br></pre></td></tr></table></figure><p>最后，删除预发布分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d release-1.2</span><br></pre></td></tr></table></figure><h4 id="6、Fixbug-修补bug分支"><a href="#6、Fixbug-修补bug分支" class="headerlink" title="6、Fixbug 修补bug分支"></a>6、Fixbug 修补bug分支</h4><p>最后一种是修补bug分支。软件正式发布以后，难免会出现bug。这时就需要创建一个分支，进行 bug 修补。 修补 bug 分支是从 Master 分支上面分出来的。修补结束以后，再合并进 Master 和 Develop 分支。它的命名，可以采用 fixbug-* 的形式。</p><p>创建一个修补bug分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b fixbug-0.1 master</span><br></pre></td></tr></table></figure><p>修补结束后，合并到master分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git merge --no-ff fixbug-0.1</span><br><span class="line">git tag -a 0.1.1</span><br></pre></td></tr></table></figure><p>再合并到develop分支：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout develop</span><br><span class="line">git merge --no-ff fixbug-0.1</span><br></pre></td></tr></table></figure><p>最后，删除”修补bug分支”：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d fixbug-0.1</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目管理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>深入浅出Node笔记</title>
       <link href="/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/"/>
       <url>/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/</url>
@@ -2779,31 +2804,6 @@
     
     
     <entry>
-      <title>Fork 同步源代码</title>
-      <link href="/2018/09/09/%E5%90%8C%E6%AD%A5%E6%BA%90%E4%BB%A3%E7%A0%81/"/>
-      <url>/2018/09/09/%E5%90%8C%E6%AD%A5%E6%BA%90%E4%BB%A3%E7%A0%81/</url>
-      
-        <content type="html"><![CDATA[<ol><li><p>查看远程分支状态：<code>git remote -v</code></p></li><li><p>确定一个将被同步给 fork 远程的上游仓库：<code>git remote add upstream &lt;origin.git&gt;</code></p></li><li><p>再次查看状态确认是否配置成功：<code>git remote -v</code></p></li><li><p>从上游仓库 fetch 分支和提交点，提交给本地 master： <code>git fetch upstream</code></p></li><li><p>把 upstream/master 分支合并到本地 master 上：<code>git merge upstream/master</code></p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 项目管理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Js-Html转文本</title>
       <link href="/2018/08/25/html%E8%BD%AC%E6%96%87%E6%9C%AC(js)/"/>
       <url>/2018/08/25/html%E8%BD%AC%E6%96%87%E6%9C%AC(js)/</url>
@@ -2921,31 +2921,6 @@
         <tags>
             
             <tag> CKeditor </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git 安装配置及基本使用</title>
-      <link href="/2018/07/11/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-      <url>/2018/07/11/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-      
-        <content type="html"><![CDATA[<p>git 安装配置基本说明</p><a id="more"></a><ol><li><p>从官网下载安装包，手动完成安装。</p></li><li><p>打开 Git Bash 命令行工具，执行命令 ssh-keygen -t rsa -C Email-Addresss 生成一个密钥对。</p></li><li><p>登录到 GitLab，点击右上角你的用户头像，点击 Edit Profile settings，点击 SSH Keys，点击 Add SSH Key，填写 Title 栏，复制用户目录下.ssh/id_rsa.pub 文件的内容到 Key，点击 Add Key。</p></li><li><p>点击右上角的 New project，填写完成后点击 Create project 新建一个仓库，点击 Activity，点击 SSH 后复制 SSH 边上栏里的地址。</p></li><li><p>打开 Git Bash 命令行工具，切换到一个合适的目录，使用命令 git clone 刚才复制的 URL 克隆创建的仓库。</p></li><li><p>进入目录 cd 仓库名，执行命令 git config –global user.email your-email， git config –global user.name your-name，设置你的个人信息。</p></li><li><p>执行命令：</p><p>echo “#Description” &gt; README.md，添加一个文件</p><p>git status，查看当前状态，发现有未跟踪文件</p><p>git add .，当前目录所有文件添加到暂存区</p><p>git diff，比较当前工作区和暂存区有何不同</p><p>git status，查看当前状态，发现有文件未提交</p><p>git commit -m “注释”，把暂存区内容提交到本地仓库</p><p>git push -u origin master，把本地仓库的提交推送到远程仓库</p><p>git log，查看提交日志</p></li></ol><hr><h3 id="Git-本地分支管理"><a href="#Git-本地分支管理" class="headerlink" title="Git 本地分支管理"></a>Git 本地分支管理</h3><ol><li><p>分支的创建、合并、删除</p><p>git branch，显示所有分支</p><p>git branch b1，从当前分支创建一个叫 b1 的分支</p><p>git checkout b1，切换到 b1 分支</p><p>git checkout -b b1，相当于以上两条命令的组合</p><p>git checkout master，切换到 master 主分支</p><p>git merge b1，把 b1 分支的代码合并到 master 上</p><p>git branch -d b1，删除 b1 分支，不能在被删除分支上执行</p></li></ol><hr><h3 id="Git-Tag-标签管理"><a href="#Git-Tag-标签管理" class="headerlink" title="Git Tag 标签管理"></a>Git Tag 标签管理</h3><ol><li><p>标签的创建、删除</p><p>git tag t1，从当前分支创建一个名为 t1 的标签</p><p>git tag -d t1，删除名为 t1 的标签</p></li></ol><hr><h3 id="GitLib-权限管理"><a href="#GitLib-权限管理" class="headerlink" title="GitLib 权限管理"></a>GitLib 权限管理</h3><ul><li><p>Owner 项目所有者，拥有所有的操作权限</p></li><li><p>Master 项目的管理者，除更改、删除项目元信息外其它操作均可</p></li><li><p>Developer 项目的开发人员，做一些开发工作，对受保护内容无权限</p></li><li><p>Reporter 项目的报告者，只有项目的读权限，可以创建代码片断</p></li><li><p>Guest 项目的游客，只能提交问题和评论内容</p><p>具体参见 GitLab 权限，为项目添加成员时可指定成员的身份权限。</p></li></ul><hr><h3 id="为什么要有分支"><a href="#为什么要有分支" class="headerlink" title="为什么要有分支"></a>为什么要有分支</h3><p>建立分支的原因是 git 因为是分布式的，所以其核心就是分支，分支的意义在于，可以将项目代码按照功能、模块拆分成不同的分支。比如这个产品要加一个支付功能和一个登陆功能，可以创建两个分支，交给不同的开发人员并行开发。登陆功能先开发完，测试无误后合并改分支到 master 分支，master 分支部署上线。支付功能虽然没有开发完成，但是在另一条分支上，所以产品上线和功能开发完全不受影响。这才是分布式开发的高效模式。还有这样，以自己名字建立一个分支比如 xiancai，这个分支是已经做好的功能，随时可以合并到 master 上线，开发的时候，建立一个带功能前缀的分支，比如 xiancai-ninghao 、xiancai-ninghao 等等，开发完之后在合并到 xiancai，每次上线，把 xiancai 合并到 master 。总之分支的做重要的意义就是提高效率！！！ 这样方便团队开发，并且不会导致混乱。</p><h3 id="分支有如下几条："><a href="#分支有如下几条：" class="headerlink" title="分支有如下几条："></a>分支有如下几条：</h3><ol><li><p>Master 主分支</p></li><li><p>Develop 分支</p></li><li><p>Feature 功能分支</p></li><li><p>Release 预发布分支</p></li><li><p>Hotfix（或者 Fixbug） 分支</p></li></ol><p>其中对于 Feature 功能分支有:</p><ul><li><p>从哪个分支分离开来：develop</p></li><li><p>必须要合并到哪个分支上：develop</p></li><li><p>分支的命名规范：除了 master，develop，release-，或者 hotfix- 以外的名字都可以比如可以用 feature-*的方式命名。</p><p>其中对于 Release 预发布分支有：</p></li><li><p>从哪个分支分离开来： develop</p></li><li><p>必须要合并到哪个分支上：develop 与 master</p></li><li><p>分支的命名规范： release-*</p><p>其中对于 Hotfix（或者 Fixbug） 分支有；</p></li><li><p>从哪个分支分离开来：master</p></li><li><p>必须要合并到哪个分支上：develop 与 master</p></li><li><p>分支的命名规范：hotfix-_ 或者 fixbug-_</p></li></ul><h3 id="主分支"><a href="#主分支" class="headerlink" title="主分支"></a>主分支</h3><h3 id="Master-主分支"><a href="#Master-主分支" class="headerlink" title="Master 主分支"></a>Master 主分支</h3><pre><code>首先，代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。Git 主分支的名字，默认叫做 Master。它是自动建立的，版本库初始化以后，默认就是在主分支在进行开发。</code></pre><h3 id="Develop-分支"><a href="#Develop-分支" class="headerlink" title="Develop 分支"></a>Develop 分支</h3><pre><code>主分支只用来发布重大版本，日常开发应该在另一条分支上完成。我们把开发用的分支，叫做 Develop。创建分支git branch develop              #只创建分支git checkout develop  #创建并切换到 develop 分支合并分支git checkout master         #切换到主分支git merge --no-ff develop   #把 develop 合并到 master 分支，no-ff 选项的作用是保留原分支记录git branch -d develop       #删除 develop 分支这里稍微解释一下，上一条命令的--no-ff参数是什么意思。默认情况下，Git执行&quot;快进式合并&quot;（fast-farward merge），会直接将Master分支指向Develop分支。</code></pre><h3 id="次分支"><a href="#次分支" class="headerlink" title="次分支"></a>次分支</h3><pre><code>除了 master 与 develop 这两个主分支，在开发时还可以创建一些次分支，目的是让团队不同的成员之间可以平行开发，更容易跟踪功能，准备为生产的发行版，快速修复生产上的问题等等。这些分支生命周期有限，可以在用完以后删掉他们。</code></pre><h3 id="Feature-功能分支"><a href="#Feature-功能分支" class="headerlink" title="Feature 功能分支"></a>Feature 功能分支</h3><pre><code>Feature（功能） 分支，有时候也叫 Topic 分支。在这种分支上去开发新的功能。当开发功能的时候，这个功能属于哪个目标发行还不知道。功能如果一直在开发，对应的这个功能分支就可以一直存在，不过到最后还是要合并到 develop 分支上，或者如果不想要开发的这个功能了，可以直接扔掉它。功能名字的命名已经在上文中有提到。创建一个功能分支：git checkout -b feature-x develop开发完成后，将功能分支合并到develop分支：git checkout developgit merge --no-ff feature-x删除feature分支：git branch -d feature-x## Release 预发布分支它是指发布正式版本之前（即合并到Master分支之前），我们可能需要有一个预发布的版本进行测试。预发布分支是从Develop分支上面分出来的，预发布结束以后，必须合并进Develop和Master分支。它的命名，可以采用release-*的形式。创建一个预发布分支：git checkout -b release-1.2 develop确认没有问题后，合并到master分支：git checkout mastergit merge --no-ff release-1.2</code></pre><h1 id="对合并生成的新节点，做一个标签"><a href="#对合并生成的新节点，做一个标签" class="headerlink" title="对合并生成的新节点，做一个标签"></a>对合并生成的新节点，做一个标签</h1><pre><code>git tag -a 1.2再合并到develop分支：git checkout developgit merge --no-ff release-1.2最后，删除预发布分支：git branch -d release-1.2Fixbug 修补bug分支最后一种是修补bug分支。软件正式发布以后，难免会出现bug。这时就需要创建一个分支，进行bug修补。 修补bug分支是从Master分支上面分出来的。修补结束以后，再合并进Master和Develop分支。它的命名，可以采用fixbug-*的形式。创建一个修补bug分支：git checkout -b fixbug-0.1 master修补结束后，合并到master分支：git checkout mastergit merge --no-ff fixbug-0.1git tag -a 0.1.1再合并到develop分支：git checkout developgit merge --no-ff fixbug-0.1最后，删除&quot;修补bug分支&quot;：git branch -d fixbug-0.1</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> 项目管理 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
             
         </tags>
       
@@ -3654,11 +3629,11 @@
     
     
     <entry>
-      <title>Git域名配置</title>
-      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
+      <title>Git环境配置</title>
+      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
       
       
       <categories>
@@ -3679,11 +3654,11 @@
     
     
     <entry>
-      <title>Git环境配置</title>
-      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      <title>Git域名配置</title>
+      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
+        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
       
       
       <categories>

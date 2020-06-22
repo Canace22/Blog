@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-06-21T14:34:29.342Z</updated>
+  <updated>2020-06-22T01:04:12.687Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git 安装配置及分支管理</title>
+    <link href="https://canace.site/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://canace.site/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2020-06-22T01:03:11.000Z</published>
+    <updated>2020-06-22T01:04:12.687Z</updated>
+    
+    <summary type="html">
+    
+      Git 安装配置及分支管理指南
+    
+    </summary>
+    
+    
+      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="git" scheme="https://canace.site/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>深入浅出Node笔记</title>
@@ -404,27 +425,6 @@
     <summary type="html">
     
       leetcode 题目，翻转字符串里的单词题解
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>生成指定范围的随机数组</title>
-    <link href="https://canace.site/2020/04/08/%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%BB%84/"/>
-    <id>https://canace.site/2020/04/08/%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%BB%84/</id>
-    <published>2020-04-08T01:17:50.000Z</published>
-    <updated>2020-05-15T03:20:49.930Z</updated>
-    
-    <summary type="html">
-    
-      输入范围，输出随机组成的数组，比如输入 minNum、maxNum、option，返回 minNum 与 maxNum 间的随机数组构成的 option 长度的数组
     
     </summary>
     
