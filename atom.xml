@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-06-22T01:04:12.687Z</updated>
+  <updated>2020-07-01T01:52:38.866Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用 Vscode 搞事情</title>
+    <link href="https://canace.site/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/"/>
+    <id>https://canace.site/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/</id>
+    <published>2020-07-01T00:44:36.000Z</published>
+    <updated>2020-07-01T01:52:38.866Z</updated>
+    
+    <summary type="html">
+    
+      突发奇想，写一篇 vscode 的各种骚操作文章，这些骚操作有些用的多，有些被遗忘在角落，根本想不起来，有必要把他们记录下来。
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="编辑器" scheme="https://canace.site/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Git 安装配置及分支管理</title>
@@ -412,27 +433,6 @@
     
     
       <category term="PixiJs" scheme="https://canace.site/tags/PixiJs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>翻转字符串里的单词</title>
-    <link href="https://canace.site/2020/04/10/%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/"/>
-    <id>https://canace.site/2020/04/10/%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/</id>
-    <published>2020-04-10T01:28:58.000Z</published>
-    <updated>2020-05-15T03:20:49.922Z</updated>
-    
-    <summary type="html">
-    
-      leetcode 题目，翻转字符串里的单词题解
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
     
   </entry>
   

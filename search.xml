@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>用 Vscode 搞事情</title>
+      <link href="/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/"/>
+      <url>/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、有极客范的写代码-————-Power-Mode"><a href="#一、有极客范的写代码-————-Power-Mode" class="headerlink" title="一、有极客范的写代码 ———— Power Mode"></a>一、有极客范的写代码 ———— Power Mode</h3><p>Power Mode 会在每次键盘按下字母时，在编辑界面对应的字符后面有一段动效，动效有几种模式，可以自己设置，用起来手感还是不错的，写起代码来会觉得更加的生动有趣。</p><p><img src="/images/power-mode.gif" alt="power mode 使用示例"></p><h3 id="二、不需要额外的工具，画流程图就是这么简单-————-vscode-drawio"><a href="#二、不需要额外的工具，画流程图就是这么简单-————-vscode-drawio" class="headerlink" title="二、不需要额外的工具，画流程图就是这么简单 ———— vscode-drawio"></a>二、不需要额外的工具，画流程图就是这么简单 ———— vscode-drawio</h3><p><img src="/images/draw-io.gif" alt="vscode-drawio 使用示例"></p><p>之前画流程图工具要么用在线的draw.io，要么用思维导图，还是比较麻烦的，有了这个插件，只需要创建 .drawio 文件，就可以方便快捷的创建流程图</p><h3 id="三、配置模板，减少重复输入代码的次数"><a href="#三、配置模板，减少重复输入代码的次数" class="headerlink" title="三、配置模板，减少重复输入代码的次数"></a>三、配置模板，减少重复输入代码的次数</h3><p>每次用新的框架或者语言，一些常用的代码块总是要去反复输入，很麻烦，就在想有没有一种类似文件模板的东东，可以一键生成这些通用的代码块，看了看 vscode 的配置项，果然有，看一下效果：</p><p><img src="/images/template.gif" alt="vscode 模板使用示例"></p><p>以上示例，有我自己定义的模板，也有插件模板，自己定义模板的方法如下：</p><p><img src="/images/template-config.gif" alt="vscode 模板配置示例"></p><p>模板创建可以从设置的 user snippets 下创建，根据示例改一下提示语和内容就好，body 部分为模板内容，每一行作为数组的一个元素，该数组为字符串数组。</p><h3 id="四、md-写-ppt-就是这么简单-————-Marp"><a href="#四、md-写-ppt-就是这么简单-————-Marp" class="headerlink" title="四、md 写 ppt 就是这么简单 ———— Marp"></a>四、md 写 ppt 就是这么简单 ———— Marp</h3><p>marp，全称 Markdown Presentation Ecosystem，可以方便快捷的利用 md 预览 ppt，导出 pdf，使用方法也很简单，<code>---</code> 分割页，每一页的样式可以根据自己的兴趣去定义</p><p><img src="/images/marp.png" alt="marp 使用示例"></p><p>先写这些吧，之后想起什么再补上</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编辑器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git 安装配置及分支管理</title>
       <link href="/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
       <url>/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
@@ -3629,11 +3654,11 @@
     
     
     <entry>
-      <title>Git环境配置</title>
-      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      <title>Git域名配置</title>
+      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
+        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
       
       
       <categories>
@@ -3654,11 +3679,11 @@
     
     
     <entry>
-      <title>Git域名配置</title>
-      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
+      <title>Git环境配置</title>
+      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
       
       
       <categories>
