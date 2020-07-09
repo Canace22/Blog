@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Canace 的博客</title>
   
-  <subtitle>Tomorrow is another day</subtitle>
+  <subtitle>好记性不如烂笔头，坐在岸上学不会游泳</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
@@ -59,6 +59,27 @@
   </entry>
   
   <entry>
+    <title>Git 安装配置及分支管理</title>
+    <link href="https://canace.site/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>https://canace.site/2020/06/22/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
+    <published>2020-06-22T01:03:11.000Z</published>
+    <updated>2020-07-09T03:02:40.149Z</updated>
+    
+    <summary type="html">
+    
+      Git 安装配置及分支管理指南
+    
+    </summary>
+    
+    
+      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="git" scheme="https://canace.site/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深入浅出Node笔记</title>
     <link href="https://canace.site/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/"/>
     <id>https://canace.site/2020/06/21/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BANode%E7%AC%94%E8%AE%B0/</id>
@@ -80,6 +101,27 @@
   </entry>
   
   <entry>
+    <title>Git 文档</title>
+    <link href="https://canace.site/2020/06/18/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://canace.site/2020/06/18/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-06-18T03:05:12.000Z</published>
+    <updated>2020-07-09T03:02:40.151Z</updated>
+    
+    <summary type="html">
+    
+      根据平常经验整理的 git 文档
+    
+    </summary>
+    
+    
+      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="git" scheme="https://canace.site/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CommonJS、AMD、RequireJS、CMD 以及 ES6 规范比较</title>
     <link href="https://canace.site/2020/06/18/%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/"/>
     <id>https://canace.site/2020/06/18/%E6%A8%A1%E5%9D%97%E8%A7%84%E8%8C%83/</id>
@@ -97,6 +139,27 @@
     
     
       <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序小技巧</title>
+    <link href="https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
+    <id>https://canace.site/2020/06/02/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
+    <published>2020-06-02T01:03:48.000Z</published>
+    <updated>2020-07-09T03:02:40.152Z</updated>
+    
+    <summary type="html">
+    
+      这段时间在公司的微信小程序项目，由于项目比较大，也基本涉及到了很多小程序的很多方面，媒体，网络请求自定义 tabBar 等等，其中遇到了一些坑，也封装了一些东西，在这里记录一下
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="小程序" scheme="https://canace.site/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
@@ -248,48 +311,6 @@
   </entry>
   
   <entry>
-    <title>Flutter 环境搭建</title>
-    <link href="https://canace.site/2020/05/02/flutter%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E7%9A%84%E5%9D%91/"/>
-    <id>https://canace.site/2020/05/02/flutter%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E7%9A%84%E5%9D%91/</id>
-    <published>2020-05-02T01:13:43.000Z</published>
-    <updated>2020-07-01T02:07:13.199Z</updated>
-    
-    <summary type="html">
-    
-      flutter 环境搭建的坑
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="flutter" scheme="https://canace.site/tags/flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git常用命令</title>
-    <link href="https://canace.site/2020/04/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>https://canace.site/2020/04/24/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
-    <published>2020-04-24T11:08:12.000Z</published>
-    <updated>2020-07-01T02:07:13.201Z</updated>
-    
-    <summary type="html">
-    
-      git 常用命令
-    
-    </summary>
-    
-    
-      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="git" scheme="https://canace.site/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Github 实用小技巧</title>
     <link href="https://canace.site/2020/04/24/github%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>https://canace.site/2020/04/24/github%E5%AE%9E%E7%94%A8%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
@@ -412,27 +433,6 @@
     
     
       <category term="PixiJs" scheme="https://canace.site/tags/PixiJs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>翻转字符串里的单词</title>
-    <link href="https://canace.site/2020/04/10/%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/"/>
-    <id>https://canace.site/2020/04/10/%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D/</id>
-    <published>2020-04-10T01:28:58.000Z</published>
-    <updated>2020-07-01T02:07:13.206Z</updated>
-    
-    <summary type="html">
-    
-      leetcode 题目，翻转字符串里的单词题解
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
     
   </entry>
   
