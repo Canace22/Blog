@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>级联</title>
+      <link href="/2020/07/12/%E7%BA%A7%E8%81%94/"/>
+      <url>/2020/07/12/%E7%BA%A7%E8%81%94/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、级联的定义"><a href="#一、级联的定义" class="headerlink" title="一、级联的定义"></a>一、级联的定义</h3><p>浏览器决定为元素应用何样式的一种方法</p><h3 id="二、特指度"><a href="#二、特指度" class="headerlink" title="二、特指度"></a>二、特指度</h3><h4 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h4><p>度量 CSS 选择器识别元素精确性的指标</p><h4 id="2、计算"><a href="#2、计算" class="headerlink" title="2、计算"></a>2、计算</h4><p>(1) 为 a、b、c、d 中的各个变量赋予相应的数值，其中，</p><ul><li><p>a 表示 style 属性样式 (0 || 1)</p></li><li><p>b 表示 ID 选择器的数量</p></li><li><p>c 表示类选择器、属性选择器和伪类的数量</p></li><li><p>d 表示类型选择器和伪元素的数量</p></li></ul><p>(2) 比较选择器的特指度时，最左侧的选择器特指度最高</p><h3 id="三、规则集顺序"><a href="#三、规则集顺序" class="headerlink" title="三、规则集顺序"></a>三、规则集顺序</h3><h4 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h4><p>描述 CSS 规则集在样式表中的位置</p><h4 id="2、优先级"><a href="#2、优先级" class="headerlink" title="2、优先级"></a>2、优先级</h4><p>(1) 如果两个声明块中的选择器特指度相同，且他们为同一元素的某个属性应用样式，则在样式表中处于相对靠后位置的声明块中的属性优先级较高</p><p>(2) 除非用 style 属性添加行内样式，否则特指度和规则集顺序决定为元素应用何种样式</p><p>(3) <code>&lt;style&gt;</code> 块或外部样式表中的样式如要比其他样式（包括用 style 属性添加的行内样式）更精确，唯一的方法是在声明块中添加 <code>!important</code> , 若选择相同元素的多个声明块均使用 <code>!important</code>，则位置最靠后的声明块起作用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>重构 vs 架构</title>
+      <link href="/2020/07/12/%E9%87%8D%E6%9E%84vs%E6%9E%B6%E6%9E%84/"/>
+      <url>/2020/07/12/%E9%87%8D%E6%9E%84vs%E6%9E%B6%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、重构的定义"><a href="#一、重构的定义" class="headerlink" title="一、重构的定义"></a>一、重构的定义</h3><p>指在不改变代码行为的前提下，重写代码，使其更加简洁，易于复用</p><h3 id="二、软件架构的定义"><a href="#二、软件架构的定义" class="headerlink" title="二、软件架构的定义"></a>二、软件架构的定义</h3><p>描述软件项目的各个不同部位之间的组合方式</p><h3 id="三、优秀架构的特点"><a href="#三、优秀架构的特点" class="headerlink" title="三、优秀架构的特点"></a>三、优秀架构的特点</h3><p>1、可预测：对软件的工作方式和结构做出准确的假设，使别人很容易明白和理解</p><p>2、可复用：可以在多处使用同一代码，而无需重写</p><p>3、可扩展：增量开发的过程中，无需做大的结构性变化</p><p>4、可维护：需求变更时，修改一处代码，无需大规模改动其他代码</p><h3 id="四、重构的原因"><a href="#四、重构的原因" class="headerlink" title="四、重构的原因"></a>四、重构的原因</h3><p>1、 需求变更</p><p>2、 架构设计不合理</p><p>3、 低估困难，预估开发时间短，赶进度的开发模式</p><p>4、 忽视最佳实践</p><h3 id="五、什么情况下应该重构代码"><a href="#五、什么情况下应该重构代码" class="headerlink" title="五、什么情况下应该重构代码"></a>五、什么情况下应该重构代码</h3><p>1、修复的 bug 或开发的新功能用到了已有代码（需要复用现有代码）</p><p>2、 处理小任务时顺便重构</p><p>3、当重构能够改善架构或使代码符合编码规范时</p><h3 id="六、重构总结"><a href="#六、重构总结" class="headerlink" title="六、重构总结"></a>六、重构总结</h3><p>1、抽取行内 CSS 可提升复用性</p><p>2、分离代码功能（样式和结构）可增强代码可读性</p><p>3、回归测试可手动用 web 浏览器完成，或通过比较重构后的界面与重构前的界面截图完成</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Docker指南</title>
+      <link href="/2020/07/11/docker%E6%8C%87%E5%8D%97/"/>
+      <url>/2020/07/11/docker%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、docker-环境配置"><a href="#一、docker-环境配置" class="headerlink" title="一、docker 环境配置"></a>一、docker 环境配置</h3><h4 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h4><p>(1) mac，下载完之后安装即可</p><ul><li>下载: <a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac/" target="_blank" rel="noopener">地址</a></li><li>创建容器：<code>docker run -dp 80:80 docker/getting-started</code></li></ul><p>(2) linux</p><ul><li><p>设置源</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置源</span></span><br><span class="line">sudo yum-config-manager \</span><br><span class="line">--add-repo \</span><br><span class="line">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></li><li><p>安装</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum list docker</span><br><span class="line">yum -y install docker</span><br><span class="line">docker -v</span><br></pre></td></tr></table></figure></li></ul><h3 id="2、操作"><a href="#2、操作" class="headerlink" title="2、操作"></a>2、操作</h3><p>安装 linux 版一直没成功，未完待续……</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微信小程序小技巧</title>
       <link href="/2020/07/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
       <url>/2020/07/10/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</url>
@@ -3158,19 +3233,19 @@
       <link href="/2018/06/07/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E7%AE%97%E6%B3%95%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
       <url>/2018/06/07/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E7%AE%97%E6%B3%95%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<h4 id="一、什么是算法"><a href="#一、什么是算法" class="headerlink" title="一、什么是算法"></a>一、什么是算法</h4><ol><li>算法是对特定问题的解决步骤（对信息进行排序、搜索目标信息等）；</li></ol><ul><li>算法 → 更优质的算法 → 好的程序；</li><li>算法的两个必要条件：</li><li>准确性，证明方法——断言；</li><li><p>可停止性（死循环不能看做算法）；</p></li><li><p>几种重要的算法：</p></li><li>数论算法：<ul><li>求解最大公约数的辗转相除法；</li><li>求解联立方程的高斯消元法；</li><li>求解定积分近似值的梯形公式;</li><li>计算质数的艾拉斯托尼筛法;</li></ul></li><li>排序算法(按序排列)：<ul><li>选择排序；</li><li>冒泡排序；</li><li>插入排序；</li><li>希尔排序;</li><li>归并排序;</li><li>快速排序；</li></ul></li><li>搜索算法：（比较求同）<ul><li>线性搜索；</li><li>二分搜索；</li></ul></li><li><p>字符串匹配算法：</p><ul><li>简单字符串搜索；</li><li>KMP 算法；</li><li>BM 算法；</li></ul></li><li><p>结构化编程思想：旨在高效描述程序，最大限度减少设计误差的方法论，其中的处理流程结构组合包括：</p></li><li>顺序结构：按顺序处理；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-9f036b6001ef4e07.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></li><li><p>选择结构：按条件处理；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-68f37dd7d235e531.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p></li><li><p>循环结构：条件成立下，进行定量循环处理；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-a41112c31c533ab9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p></li></ul><h4 id="二、-变量和数组"><a href="#二、-变量和数组" class="headerlink" title="二、 变量和数组"></a>二、 变量和数组</h4><ol><li>算法由数据和处理构成；</li></ol><ul><li>基本数据类型：<ul><li>整数；</li><li>浮点数；</li><li>字符；</li><li>布尔值；</li><li>字符串；</li></ul></li><li>描述数据信息的方法是数据值；</li><li>变量是存放数据值的容器，变量的作用是使处理过程通用化，每个变量只能存放一个数据，变量名是区分不同变量的标记，变量名要能表示所装载的数据；</li><li>把数据赋值给变量的过程叫代入；</li><li>数组是用来保存大量同一数据类型值的，数组索引，即数组元素的位置标号，可以利用数组进行关联数据的处理；</li><li>二维数组，数组元素沿横纵方向排列；</li></ul><h4 id="三、数据结构——高效的管理大量数据的构造"><a href="#三、数据结构——高效的管理大量数据的构造" class="headerlink" title="三、数据结构——高效的管理大量数据的构造"></a>三、数据结构——高效的管理大量数据的构造</h4><ol><li>常用的数据结构：</li></ol><ul><li><p><b>数组</b>，快速定位第 N 个数据；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-5279810825a68703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p></li><li><p><b>链表</b>，离散数据排序，快速插入删除数据（插入、删除数据不改变数据位置）。单向链表只能单向检索，元素由数据和“NEXT 指针”构成，HEAD 指针标记链表的第一个元素。双向链表元素由数据，PREV、NEXT 指针构成，可向前向后检索数据，链表为空的状态，HEAD 指针，TAIL 指针分别存储“没有起始元素”、“没有末尾元素”的信息；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-6113ee58c4fc1e74.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p></li><li><p><b>堆栈</b>（先进后出），数据操作：入栈 → 写入数据（push）→ 出栈（POP）→ 读取数据。考虑计算机优先级或者计算机管理子程序调用的顺序时用到；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-21be1fcb8546bd49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p></li><li><p><b>队列</b>（先进先出），应用在电文发放和接收中；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-0789fc904f456296.gif?imageMogr2/auto-orient/strip" alt="图片来源于网络"></p></li><li><p><b>树</b>，管理父节点数据和子节点数据，二叉树一个父节点对用两个子节点，可以用数组来表示二叉树；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-a812b66052043bd4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"><br><img src="http://upload-images.jianshu.io/upload_images/1476489-061f5d3516622b9b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"><br><img src="http://upload-images.jianshu.io/upload_images/1476489-f43abcb33e47957a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p></li><li><p>图，自由的表示各种关系的数据。图的分类：有向图（边有方向性）、加权图（边有权重）；<br><img src="http://upload-images.jianshu.io/upload_images/1476489-ea65bbf1f9b3b98b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p></li></ul><h4 id="四、算法基础"><a href="#四、算法基础" class="headerlink" title="四、算法基础"></a>四、算法基础</h4><ol><li>循环处理和控制变量</li></ol><ul><li>循环处理：利用一个控制变量来管理循环次数，从而进行必要次数的处理；</li><li>循环处理的步骤：<ul><li>设置控制变量的初始值；</li><li>判断循环条件，如果为 true，进行以下 3,4,步，否则为 false，终止处理；</li><li>执行循环体；</li><li>改变控制变量，回到步骤 2；</li></ul></li><li><p>利用循环处理使处理过程通用化；<br><b>案例：</b><br>计算 1~N 的整数的总和。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-233c00b2f31f8e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-4ea54b8cba9d8db1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>使用数组可以高效的处理大量数据<br><b>案例：</b><br>求斐波那契数列。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-b0f7928c9e70b00c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-aae2fafe110aeb4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>数组求和<br><b>案例：</b><br>计算一年的营业额。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-ca431aa7a661a3fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-2498e2f8f6979555.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>求平均值<br><b>案例：</b><br>求班级考试的平均分。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-a288f74be53c16ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-a4ea9bb73708cdf4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>求数组数据中的最大值<br><b>案例：</b><br>求最高分。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-5934e850b29830b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-393b1a7d9a9bc418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>求数据中的最小值<br><b>案例：</b><br>求最低分。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-7d3483e3bd32591a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-a49e301d22d84669.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>为数组元素排序<br><b>案例：</b><br>为考试成绩排名。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-2d67aeb495cc806e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-34838194b6e477e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>二维数组操作<br><b>案例</b><br>求全班学生不同科目考试合计总分。<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-bfadc73a743b91f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-b4681f4285738dc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li><li><p>求两个数的最大公约数<br><b>案例：</b><br>辗转相除法<br>算法：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-460179a152a07806.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br>JavaScript 代码：<br><img src="http://upload-images.jianshu.io/upload_images/1476489-3fc4fb3e5c8ebb16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p></li></ul><h4 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h4><ol><li>几种常用的排序算法<ul><li>桶排序<br>概念：<br>准备与待排序数据取值范围大小个数的木桶，利用这些木桶对数据进行保存、排序。<br>排序过程：<br>（1）准备好木桶数据，把其所有元素初始化为 0；<br>（2）把保存排序数组（n 个数据）的下标的变量 i 初始化为 0；<br>（3）i 小于 n 时，循环执行 4~5；<br>（4）把 data[i]代入变量 value；<br>（5）bucket[value]加 1；<br>（6）i 加 1；<br>（7）从 bucket 的起始元素开始，把每个数值非 0 的元素的下标按照数值（出现次数）取出来，排成一列。</li><li>选择排序<br>概念：<br>遍历数据，把数据中的最大值（或最小值）与起始（或者末尾）数据进行交换。<br>排序过程：<br>（1）从“待排序部分”中找到最小值；<br>（2）把最小值和“待排序部分起始位置的元素”交换；<br>（3）“待排序部分”的起始位置向后移动一位；<br>（4）循环操作 1~3，直至“待排序部分”只剩下一个元素。</li><li>冒泡排序<br>对比相邻的两个数据，根据大小关系调整两个数据的顺序。</li><li>插入排序<br>把目标数据按照正确的大小排列顺序插入相应的位置中。</li><li>归并排序<br>把目标数据分割成更小的部分进行排序，更小的部分正确排序之后再合并起来。</li><li>希尔排序<br>把目标数据按照一定的个数分成几个区域进行插入排序。</li><li>快速排序<br>从目标数据中任意选取一个数据，以这个数据的值为分割点，把目标数据分割为两部分。这样循环操作下去进行排序。</li></ul></li></ol><h4 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h4><ol><li>常用的搜索算法：</li></ol><ul><li>线性搜索（随机排布的数据列中使用，效率比较低）；</li><li>二分搜索（已经排好序的数据列中使用，效率较高）；</li><li>利用哈希表进行搜索（高效搜索）；</li><li>简单字符串搜索（有长度的数据）；</li><li>利用 KMP 算法 进行字符串搜索；</li><li>利用 BM 算法进行字符串搜索。</li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="一、什么是算法"><a href="#一、什么是算法" class="headerlink" title="一、什么是算法"></a>一、什么是算法</h3><h4 id="1、算法是对特定问题的解决步骤（对信息进行排序、搜索目标信息等）"><a href="#1、算法是对特定问题的解决步骤（对信息进行排序、搜索目标信息等）" class="headerlink" title="1、算法是对特定问题的解决步骤（对信息进行排序、搜索目标信息等）"></a>1、算法是对特定问题的解决步骤（对信息进行排序、搜索目标信息等）</h4><p>算法 → 更优质的算法 → 好的程序；</p><h4 id="2、算法的两个必要条件："><a href="#2、算法的两个必要条件：" class="headerlink" title="2、算法的两个必要条件："></a>2、算法的两个必要条件：</h4><ul><li><p>准确性，证明方法——断言；</p></li><li><p>可停止性（死循环不能看做算法）；</p></li></ul><h4 id="3、几种重要的算法："><a href="#3、几种重要的算法：" class="headerlink" title="3、几种重要的算法："></a>3、几种重要的算法：</h4><p>(1) 数论算法：</p><ul><li><p>求解最大公约数的辗转相除法；</p></li><li><p>求解联立方程的高斯消元法；</p></li><li><p>求解定积分近似值的梯形公式;</p></li><li><p>计算质数的艾拉斯托尼筛法;</p></li></ul><p>(2) 排序算法(按序排列)：</p><ul><li><p>选择排序；</p></li><li><p>冒泡排序；</p></li><li><p>插入排序；</p></li><li><p>希尔排序;</p></li><li><p>归并排序;</p></li><li><p>快速排序；</p></li></ul><p>(3) 搜索算法：（比较求同）</p><ul><li><p>线性搜索；</p></li><li><p>二分搜索；</p></li></ul><p>(4) 字符串匹配算法：</p><ul><li><p>简单字符串搜索；</p></li><li><p>KMP 算法；</p></li><li><p>BM 算法；</p></li></ul><h4 id="4、结构化编程思想"><a href="#4、结构化编程思想" class="headerlink" title="4、结构化编程思想"></a>4、结构化编程思想</h4><p>旨在高效描述程序，最大限度减少设计误差的方法论，其中的处理流程结构组合包括：</p><p>(1) 顺序结构：按顺序处理；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-9f036b6001ef4e07.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/212/format/webp" alt="图片来源于网络"></p><p>(2) 选择结构：按条件处理；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-68f37dd7d235e531.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p><p>(3) 循环结构：条件成立下，进行定量循环处理；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-a41112c31c533ab9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p><h3 id="二、-变量和数组"><a href="#二、-变量和数组" class="headerlink" title="二、 变量和数组"></a>二、 变量和数组</h3><p>算法由数据和处理构成；</p><p>(1) 基本数据类型：整数、浮点数、字符、布尔值及字符串；</p><p>(2) 描述数据信息的方法是数据值；</p><p>(3) 变量是存放数据值的容器，变量的作用是使处理过程通用化，每个变量只能存放一个数据，变量名是区分不同变量的标记，变量名要能表示所装载的数据； </p><p>(4) 把数据赋值给变量的过程叫代入；</p><p>(5) 数组是用来保存大量同一数据类型值的，数组索引，即数组元素的位置标号，可以利用数组进行关联数据的处理；</p><p>(6) 二维数组，数组元素沿横纵方向排列；</p><h3 id="三、数据结构——高效的管理大量数据的构造"><a href="#三、数据结构——高效的管理大量数据的构造" class="headerlink" title="三、数据结构——高效的管理大量数据的构造"></a>三、数据结构——高效的管理大量数据的构造</h3><p>常用的数据结构：</p><p>(1) <strong>数组</strong>，快速定位第 N 个数据；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-5279810825a68703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p><p>(2) <strong>链表</strong>，离散数据排序，快速插入删除数据（插入、删除数据不改变数据位置）。单向链表只能单向检索，元素由数据和“NEXT 指针”构成，HEAD 指针标记链表的第一个元素。双向链表元素由数据，PREV、NEXT 指针构成，可向前向后检索数据，链表为空的状态，HEAD 指针，TAIL 指针分别存储“没有起始元素”、“没有末尾元素”的信息；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-6113ee58c4fc1e74.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p><p>(3) <strong>堆栈</strong>（先进后出），数据操作：入栈 → 写入数据（push）→ 出栈（POP）→ 读取数据。考虑计算机优先级或者计算机管理子程序调用的顺序时用到；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-21be1fcb8546bd49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络"></p><p>(4) <strong>队列</strong>（先进先出），应用在电文发放和接收中；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-0789fc904f456296.gif?imageMogr2/auto-orient/strip" alt="图片来源于网络"></p><p>(5) <strong>树</strong>，管理父节点数据和子节点数据，二叉树一个父节点对用两个子节点，可以用数组来表示二叉树；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-a812b66052043bd4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-061f5d3516622b9b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-f43abcb33e47957a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p><p>(6) 图，自由的表示各种关系的数据。图的分类：有向图（边有方向性）、加权图（边有权重）；</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-ea65bbf1f9b3b98b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于手机拍摄"></p><h3 id="四、算法基础"><a href="#四、算法基础" class="headerlink" title="四、算法基础"></a>四、算法基础</h3><h4 id="1、-循环处理和控制变量"><a href="#1、-循环处理和控制变量" class="headerlink" title="1、 循环处理和控制变量"></a>1、 循环处理和控制变量</h4><p>(1) 循环处理：利用一个控制变量来管理循环次数，从而进行必要次数的处理；</p><p>(2) 循环处理的步骤：</p><ul><li><p>设置控制变量的初始值；</p></li><li><p>判断循环条件，如果为 true，进行以下 3,4,步，否则为 false，终止处理；</p></li><li><p>执行循环体；</p></li><li><p>改变控制变量，回到步骤 2；</p></li></ul><p>(3) 利用循环处理使处理过程通用化；</p><p>  <strong>案例：</strong></p><p>  计算 1~N 的整数的总和。</p><p>  算法：</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-233c00b2f31f8e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><p>  JavaScript 代码：</p><p>  <img src="https://upload-images.jianshu.io/upload_images/1476489-4ea54b8cba9d8db1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p><h4 id="2、-使用数组可以高效的处理大量数据"><a href="#2、-使用数组可以高效的处理大量数据" class="headerlink" title="2、 使用数组可以高效的处理大量数据"></a>2、 使用数组可以高效的处理大量数据</h4><p>(1) 求斐波那契数列。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-b0f7928c9e70b00c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="案例"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-aae2fafe110aeb4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(2) 数组求和</p><p>计算一年的营业额。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-ca431aa7a661a3fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-2498e2f8f6979555.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(3) 求平均值</p><p>求班级考试的平均分。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-a288f74be53c16ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-a4ea9bb73708cdf4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(4) 求数组数据中的最大值</p><p>求最高分。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-5934e850b29830b9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-393b1a7d9a9bc418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(5) 求数据中的最小值</p><p>求最低分。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-7d3483e3bd32591a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-a49e301d22d84669.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(6) 为数组元素排序</p><p>为考试成绩排名。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-2d67aeb495cc806e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-34838194b6e477e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(7) 二维数组操作</p><p>求全班学生不同科目考试合计总分。</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-bfadc73a743b91f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-b4681f4285738dc5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><p>(8) 求两个数的最大公约数</p><p>辗转相除法</p><p>算法：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-460179a152a07806.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="算法"></p><p>JavaScript 代码：</p><p><img src="https://upload-images.jianshu.io/upload_images/1476489-3fc4fb3e5c8ebb16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p><h4 id="2、排序算法"><a href="#2、排序算法" class="headerlink" title="2、排序算法"></a>2、排序算法</h4><p>几种常用的排序算法</p><p>(1) 桶排序: 准备与待排序数据取值范围大小个数的木桶，利用这些木桶对数据进行保存、排序。</p><p>排序过程：</p><ul><li><p>准备好木桶数据，把其所有元素初始化为 0；</p></li><li><p>把保存排序数组（n 个数据）的下标的变量 i 初始化为 0；</p></li><li><p>i 小于 n 时，循环执行 4~5；</p></li><li><p>把 data[i]代入变量 value；</p></li><li><p>bucket[value]加 1；</p></li><li><p>i 加 1；</p></li><li><p>从 bucket 的起始元素开始，把每个数值非 0 的元素的下标按照数值（出现次数）取出来，排成一列。</p></li></ul><p>(2) 选择排序: 遍历数据，把数据中的最大值（或最小值）与起始（或者末尾）数据进行交换。</p><p>排序过程：</p><ul><li><p>从“待排序部分”中找到最小值；</p></li><li><p>把最小值和“待排序部分起始位置的元素”交换；</p></li><li><p>“待排序部分”的起始位置向后移动一位；</p></li><li><p>循环操作 1~3，直至“待排序部分”只剩下一个元素。</p></li></ul><p>(3) 冒泡排序: 对比相邻的两个数据，根据大小关系调整两个数据的顺序。</p><p>(4) 插入排序: 把目标数据按照正确的大小排列顺序插入相应的位置中。</p><p>(5) 归并排序: 把目标数据分割成更小的部分进行排序，更小的部分正确排序之后再合并起来。</p><p>(6) 希尔排序: 把目标数据按照一定的个数分成几个区域进行插入排序。</p><p>(7) 快速排序: 从目标数据中任意选取一个数据，以这个数据的值为分割点，把目标数据分割为两部分。这样循环操作下去进行排序。</p><h4 id="3、搜索算法"><a href="#3、搜索算法" class="headerlink" title="3、搜索算法"></a>3、搜索算法</h4><p>常用的搜索算法：</p><ul><li><p>线性搜索（随机排布的数据列中使用，效率比较低）；</p></li><li><p>二分搜索（已经排好序的数据列中使用，效率较高）；</p></li><li><p>利用哈希表进行搜索（高效搜索）；</p></li><li><p>简单字符串搜索（有长度的数据）；</p></li><li><p>利用 KMP 算法 进行字符串搜索；</p></li><li><p>利用 BM 算法进行字符串搜索。</p></li></ul>]]></content>
       
       
       <categories>
           
-          <category> 算法 </category>
+          <category> 读书笔记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> algorithmn </tag>
             
         </tags>
       
@@ -3338,32 +3413,7 @@
       
       <categories>
           
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于写周报的笔记</title>
-      <link href="/2018/05/20/%E5%85%B3%E4%BA%8E%E5%86%99%E5%91%A8%E6%8A%A5%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
-      <url>/2018/05/20/%E5%85%B3%E4%BA%8E%E5%86%99%E5%91%A8%E6%8A%A5%E7%9A%84%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<p>如果你上班了，你们公司会要求你写周报吗？如果你还是学生，你的父母或老师会要求你写周报吗？没人要求，还会自发性的写周报吗？写周报给你带来了什么样的改变？</p><p>我是写周报的，虽然公司也要求写，但更多出于自发性的写，我把他当作 GTD 系统中的一部分，对我而言是 CONTEXT，起承上启下的作用。</p><ol><li><p>区别</p><p>(1) 被动写周报和主动记录反馈本周状态是有区别的，被动通常受命于人，属于履行任务，追求的是效率，希望尽可能快的完成；而主动写周报通常是自发性的，属于自我反省，追求的是问题的发现-解决-反馈，需要静下心来思考。</p><p>(2) 工作周报和个人总结周报也是有区别的：</p><p>(3) 内容上，工作周报只需要记录和工作相关的事情，而个人周报不仅需要总结工作，还需要总结生活、学习；</p><p>(4) 深度上，由于工作周报通常是需要提交给部门老大看，因此在剖析问题、总结得失，自我反省上非常不深刻，甚至会出现避重就轻的问题，一份周报常常沦为简单对工作任务的概括和陈述；而个人周报则不容易出现这类问题，就好比面壁自省，谁还会在乎什么话该说还是不该说，都是自个儿的事；</p></li><li><p>方法</p><p>(1) Step-1-回顾</p><pre><code>A. 检查计划中关键项目/任务的完成进度是否符合预期；B. 反馈各项目/任务的执行结果，如：完成情况/未达预期的原因/失败的原因；C. 统计日程表中各任务的耗时情况是否正常，有没有效率特低或特高的情况，原因写到备注中；D. 回溯上一周面临的问题是否得到解决，解决方案是否有效，并对问题解决的过程进行概括；</code></pre><p>(2) Step-2-总结</p><pre><code>A. 总结本周面临的新问题，描述问题并概括导致问题出现的原因，准备以何种解决方案应对？B. 对工作、学习、生活（主要是人际关系）三方面进行评估，一方面对重点任务进行陈述性总结，另一方面评估重点任务的完成质量</code></pre></li><li><p>Step-3-计划</p><p>(1) 列出能预见到的项目/任务，如：阅读书籍&lt;在你身边为你设计&gt;；</p><p>(2) 细化任务，一方面要计划任务量，另一方面要计划时间分配，如：阅读到用研部分（P125 页）完，睡前阅读 30 分钟，周末统一整理笔记</p><p>OK，通过这三个步骤，基本上就可以写出一份到位的周报总结了，另外月报的方法也大同小异，可参考着写。</p></li></ol><p>另外，以前还看到过别人周报中设置的一些关注点，可供大家参考：</p><ol><li><p>黄金时间分布段：目的是把重点任务分配到精力最集中，最不容易受干扰的时间段去做；</p></li><li><p>总结任务的分类，各分类下的任务量，无需脑力的 Brain Dead 任务和需要静下心做的 Deep Time 任务各占了多少时间</p></li><li><p>如果你有建立一个靠谱的理想，你每天花费多少时间在上面？</p></li><li><p>评估你的精力状况，避免因为安排太多任务而透支</p></li></ol><p>一句话就是总结：你这周做了什么？做得怎么样？接下来你准备做什么？怎么去做？</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
+          <category> 读书笔记 </category>
           
       </categories>
       
@@ -3446,31 +3496,6 @@
         <tags>
             
             <tag> 影评 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>碎片化阅读知识系统化方法</title>
-      <link href="/2018/05/20/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%96%B9%E6%B3%95/"/>
-      <url>/2018/05/20/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<ol><li><p>认识： 碎片化阅读分为两个维度，即阅读时间碎片化和阅读内容碎片化。</p></li><li><p>高效阅读是指在读完大量书籍之后能记住书中的有效信息，可以讲出读过的书的主要内容，能讲的核心是学会做笔记和整理笔记。</p></li><li><p>阅读材料分类，基础的分类：专业精读、兴趣泛读、休闲轻松（阅读材料分级）。</p></li><li><p>个人阅读时间规划（阅读时间分级），大致可以分为：长时段（周末超过2小时的长时段、晚饭后到睡前1-4小时不等的时间）、每日恒定时间（乘坐各种交通工具上下班/学的时间，午饭/晚饭前、后的半小时，学生的课间）、机动时间（偶然状况空闲）。随机时间的应对策略：随身带书或者阅读器（要求：能做笔记、输出笔记）。</p></li><li><p>阅读的材料与时间段合理 配比，比如：长时间段→阅读专业精读书目、每日恒定时间→阅读兴趣泛读书目、机动时间→阅读休闲轻松书目。注意：无论选用哪种时间与书目的配比类型，一周之内都需要一个完整的时间段来完成全部笔记的整理工作，只有这样才能永久性保证阅读质量。</p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
             
         </tags>
       
@@ -3654,11 +3679,11 @@
     
     
     <entry>
-      <title>Git域名配置</title>
-      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
+      <title>Git环境配置</title>
+      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
       
       
       <categories>
@@ -3679,11 +3704,11 @@
     
     
     <entry>
-      <title>Git环境配置</title>
-      <link href="/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-      <url>/2017/05/09/git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+      <title>Git域名配置</title>
+      <link href="/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/"/>
+      <url>/2017/05/09/git%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/</url>
       
-        <content type="html"><![CDATA[<p>结合了一些网上的方法，结合自己配置的实际情况写的文档。</p><a id="more"></a><ol><li><p>下载 git 主程序，下载地址：<a href="https://git-scm.com/downloads，" target="_blank" rel="noopener">https://git-scm.com/downloads，</a> 双击安装包，一路 next 就行；</p></li><li><p>对于技术小白的我来说，命令行神马的太复杂了，所以就需要一个 git 界面画的软件来帮助我啦，这个软件就是 TortoiseGit，下载地址：<a href="https://tortoisegit.org/download/，" target="_blank" rel="noopener">https://tortoisegit.org/download/，</a> 分为 32 位版和 64 位版，下载时要选好，安装的时候也是一路 next；</p></li><li><p>接下来就是解决怎么把本地项目关联发布到 git 上的问题了；</p></li></ol><p>(1) 首先打开 git 上的项目，复制 git 的 HTTP 地址；</p><p>(2) 然后创打开硬盘里的一个目录，最好是专门开发用的目录，点右键，选择“Git Clone…”，将地址复制进去，点击 OK；<br>(3) 出现 Success 提示，就代表 clone 成功了，close 掉对话框，然后就出现了名为 git 项目的文件夹了；</p><ol start="4"><li>本地改动保存为一个版本，我们以新建文件为例；</li></ol><p>(1) 首先，打开刚才生成文件夹，新建一个名为 readme.txt 的空文件；</p><p>(2) 然后在这里鼠标右击，选择 Git Commit -&gt; “master”…，会弹出一个对话框（注意：这里可能会提醒设置用户名、密码 和邮箱，点击确定，填写 git 账户的用户名和注册邮箱以及密码即可）；</p>]]></content>
+        <content type="html"><![CDATA[<p>git 域名配置</p><a id="more"></a><ol><li><p>在 Godaddy 购买的域名；</p></li><li><p>查找 DNSpod 解析域名，没什么难度，就是添加一条记录，保存而已，记得在添加域名到 DNSpod 之后，复制两个 NS 地址到 godaddy 的域名服务器下；</p></li><li><p>Git 项目根目录下创建 CNAME 文件，把域名填进去，push 就行了。</p></li></ol>]]></content>
       
       
       <categories>
@@ -3721,6 +3746,56 @@
         <tags>
             
             <tag> nodeJs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>碎片化阅读知识系统化方法</title>
+      <link href="/2017/05/06/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%96%B9%E6%B3%95/"/>
+      <url>/2017/05/06/%E7%A2%8E%E7%89%87%E5%8C%96%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、认识"><a href="#一、认识" class="headerlink" title="一、认识"></a>一、认识</h3><p>碎片化阅读分为两个维度，即阅读时间碎片化和阅读内容碎片化。</p><h3 id="二、高效阅读"><a href="#二、高效阅读" class="headerlink" title="二、高效阅读"></a>二、高效阅读</h3><p>指在读完大量书籍之后能记住书中的有效信息，可以讲出读过的书的主要内容，能讲的核心是学会做笔记和整理笔记。</p><h3 id="三、阅读材料分类"><a href="#三、阅读材料分类" class="headerlink" title="三、阅读材料分类"></a>三、阅读材料分类</h3><p>基础的分类：专业精读、兴趣泛读、休闲轻松（阅读材料分级）。</p><h3 id="四、个人阅读时间规划（阅读时间分级）"><a href="#四、个人阅读时间规划（阅读时间分级）" class="headerlink" title="四、个人阅读时间规划（阅读时间分级）"></a>四、个人阅读时间规划（阅读时间分级）</h3><p>大致可以分为：长时段（周末超过2小时的长时段、晚饭后到睡前1-4小时不等的时间）、每日恒定时间（乘坐各种交通工具上下班/学的时间，午饭/晚饭前、后的半小时，学生的课间）、机动时间（偶然状况空闲）。随机时间的应对策略：随身带书或者阅读器（要求：能做笔记、输出笔记）。</p><h3 id="五、阅读的材料与时间段合理"><a href="#五、阅读的材料与时间段合理" class="headerlink" title="五、阅读的材料与时间段合理"></a>五、阅读的材料与时间段合理</h3><p>配比，比如：长时间段→阅读专业精读书目、每日恒定时间→阅读兴趣泛读书目、机动时间→阅读休闲轻松书目。注意：无论选用哪种时间与书目的配比类型，一周之内都需要一个完整的时间段来完成全部笔记的整理工作，只有这样才能永久性保证阅读质量。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 个人管理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于写周报的笔记</title>
+      <link href="/2016/05/20/%E5%85%B3%E4%BA%8E%E5%86%99%E5%91%A8%E6%8A%A5%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
+      <url>/2016/05/20/%E5%85%B3%E4%BA%8E%E5%86%99%E5%91%A8%E6%8A%A5%E7%9A%84%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<p>如果你上班了，你们公司会要求你写周报吗？如果你还是学生，你的父母或老师会要求你写周报吗？没人要求，还会自发性的写周报吗？写周报给你带来了什么样的改变？</p><p>我是写周报的，虽然公司也要求写，但更多出于自发性的写，我把他当作 GTD 系统中的一部分，对我而言是 CONTEXT，起承上启下的作用。</p><h3 id="1、被动写周报与主动写周报的区别"><a href="#1、被动写周报与主动写周报的区别" class="headerlink" title="1、被动写周报与主动写周报的区别"></a>1、被动写周报与主动写周报的区别</h3><ul><li><p><strong>被动写周报和主动记录反馈本周状态是有区别的</strong>，被动通常受命于人，属于履行任务，追求的是效率，希望尽可能快的完成；而主动写周报通常是自发性的，属于自我反省，追求的是问题的发现-解决-反馈，需要静下心来思考。</p></li><li><p><strong>工作周报和个人总结周报也是有区别的</strong>： <strong>内容上</strong>，工作周报只需要记录和工作相关的事情，而个人周报不仅需要总结工作，还需要总结生活、学习；<strong>深度上</strong>，由于工作周报通常是需要提交给部门老大看，因此在剖析问题、总结得失，自我反省上非常不深刻，甚至会出现避重就轻的问题，一份周报常常沦为简单对工作任务的概括和陈述；而个人周报则不容易出现这类问题，就好比面壁自省，谁还会在乎什么话该说还是不该说，都是自个儿的事；</p></li></ul><h3 id="2、写周报的方法"><a href="#2、写周报的方法" class="headerlink" title="2、写周报的方法"></a>2、写周报的方法</h3><h4 id="1-Step-1-回顾"><a href="#1-Step-1-回顾" class="headerlink" title="(1) Step-1-回顾"></a>(1) Step-1-回顾</h4><ul><li><p>检查计划中关键项目/任务的完成进度是否符合预期；</p></li><li><p>反馈各项目/任务的执行结果，如：完成情况/未达预期的原因/失败的原因；</p></li><li><p>统计日程表中各任务的耗时情况是否正常，有没有效率特低或特高的情况，原因写到备注中；</p></li><li><p>回溯上一周面临的问题是否得到解决，解决方案是否有效，并对问题解决的过程进行概括；</p></li></ul><h4 id="2-Step-2-总结"><a href="#2-Step-2-总结" class="headerlink" title="(2) Step-2-总结"></a>(2) Step-2-总结</h4><ul><li><p>总结本周面临的新问题，描述问题并概括导致问题出现的原因，准备以何种解决方案应对？</p></li><li><p>对工作、学习、生活（主要是人际关系）三方面进行评估，一方面对重点任务进行陈述性总结，另一方面评估重点任务的完成质量</p></li></ul><h4 id="3-Step-3-计划"><a href="#3-Step-3-计划" class="headerlink" title="(3) Step-3-计划"></a>(3) Step-3-计划</h4><ul><li><p>列出能预见到的项目/任务，如：阅读书籍&lt;在你身边为你设计&gt;；</p></li><li><p>细化任务，一方面要计划任务量，另一方面要计划时间分配，如：阅读到用研部分（P125 页）完，睡前阅读 30 分钟，周末统一整理笔记</p></li></ul><p>OK，通过这三个步骤，基本上就可以写出一份到位的周报总结了，另外月报的方法也大同小异，可参考着写。</p><p>另外，以前还看到过别人周报中设置的一些关注点，可供大家参考：</p><ul><li><p>黄金时间分布段：目的是把重点任务分配到精力最集中，最不容易受干扰的时间段去做；</p></li><li><p>总结任务的分类，各分类下的任务量，无需脑力的 Brain Dead 任务和需要静下心做的 Deep Time 任务各占了多少时间</p></li><li><p>如果你有建立一个靠谱的理想，你每天花费多少时间在上面？</p></li><li><p>评估你的精力状况，避免因为安排太多任务而透支</p></li></ul><p>一句话就是总结：你这周做了什么？做得怎么样？接下来你准备做什么？怎么去做？</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 个人管理 </tag>
             
         </tags>
       
