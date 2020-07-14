@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>常用图片格式比较</title>
+      <link href="/2020/07/14/%E5%B8%B8%E7%94%A8%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%AF%94%E8%BE%83/"/>
+      <url>/2020/07/14/%E5%B8%B8%E7%94%A8%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%AF%94%E8%BE%83/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、BMP"><a href="#一、BMP" class="headerlink" title="一、BMP"></a>一、BMP</h3><p>1、是什么</p><p>无损的(没有对数据进行压缩)、既支持索引色也支持直接色的点阵图</p><p>2、缺点</p><p>由于是无损图片，所以图片文件一般比较大</p><p>3、适用场景</p><p>除了在 Windows 操作系统中还比较常见之外，我们几乎看不到它</p><h3 id="二、GIF-Graphics-Interchange-Format"><a href="#二、GIF-Graphics-Interchange-Format" class="headerlink" title="二、GIF(Graphics Interchange Format)"></a>二、GIF(Graphics Interchange Format)</h3><p>1、是什么</p><p>无损的、采用索引色的点阵图</p><p>2、优点</p><p>(1) 采用LZW压缩算法进行编码，文件小</p><p>(2) 支持动画以及透明</p><p>3、缺点</p><p>仅支持 8bit 的索引色，图片中，只能存在256种不同的颜色。</p><p>4、适用场景</p><p>适用于对色彩要求不高同时需要文件体积较小的场景</p><h3 id="三、JPEG"><a href="#三、JPEG" class="headerlink" title="三、JPEG"></a>三、JPEG</h3><p>1、是什么</p><p>有损的、采用直接色的点阵图</p><p>2、优点</p><p>采用直接色，颜色丰富</p><p>3、缺点</p><p>有损压缩，图片的部分原始信息被去除，降低了图片的质量</p><p>4、适用场景</p><p>存储照片</p><h3 id="四、PNG-8-PNG-Portable-Network-Graphics"><a href="#四、PNG-8-PNG-Portable-Network-Graphics" class="headerlink" title="四、PNG-8(PNG,Portable Network Graphics)"></a>四、PNG-8(PNG,Portable Network Graphics)</h3><p>1、是什么</p><p>无损的、使用索引色的点阵图</p><p>2、优点</p><p>(1) 文件体积小</p><p>(2) 支持透明度调节</p><p>3、适用场景</p><p>适用于需要文件体积较小的场景</p><h3 id="五、PNG-24"><a href="#五、PNG-24" class="headerlink" title="五、PNG-24"></a>五、PNG-24</h3><p>1、是什么</p><p>无损的、使用直接色的点阵图</p><p>2、优点</p><p>(1) 图片显示效果好</p><p>(2) 支持透明度调节</p><p>3、缺点</p><p>文件体积大</p><p>4、适用场景</p><p>希望达到更好的图片显示效果，不在乎图片体积</p><h3 id="六、SVG-Scalable-Vector-Graphics"><a href="#六、SVG-Scalable-Vector-Graphics" class="headerlink" title="六、SVG(Scalable Vector Graphics)"></a>六、SVG(Scalable Vector Graphics)</h3><p>1、是什么</p><p>无损的矢量图</p><p>2、优点</p><p>(1) 由于是矢量图，所以图片放大时不会失真</p><p>(2) 使用 XML 描述图片，可以方便的修改</p><p>3、适用场景</p><p>企业 Logo、Icon</p><h3 id="七、webP"><a href="#七、webP" class="headerlink" title="七、webP"></a>七、webP</h3><p>1、是什么</p><p>支持有损和无损压缩的、使用直接色的点阵图</p><p>2、优点</p><p>(1) 文件体积更小</p><p>(2) 支持透明度</p><p>3、缺点</p><p>(1) 支持的厂商少，目前只有 Chrome 浏览器和 Opera 浏览器支持 WebP 格式</p><h3 id="其他相关概念"><a href="#其他相关概念" class="headerlink" title="其他相关概念"></a>其他相关概念</h3><h4 id="1、有损压缩-vs-无损压缩"><a href="#1、有损压缩-vs-无损压缩" class="headerlink" title="1、有损压缩 vs 无损压缩"></a>1、有损压缩 vs 无损压缩</h4><p>(1) 有损压缩</p><p>指在压缩文件大小的过程中，损失了一部分图片的信息，降低了图片的质量，并且这种损失是不可逆的</p><p>(2) 无损压缩</p><p>图片质量无损耗，可以从无损压缩过的图片中恢复出原来的信息</p><h4 id="2、索引色-vs-直接色"><a href="#2、索引色-vs-直接色" class="headerlink" title="2、索引色 vs 直接色"></a>2、索引色 vs 直接色</h4><p>(1) 索引色</p><p>存储数字到图片颜色的映射，只能存有限种颜色，通常是 256 种</p><p>(2) 直接色</p><p>使用三原色和透明度存储图片，支持的色彩更丰富</p><h4 id="3、点阵图-vs-矢量图"><a href="#3、点阵图-vs-矢量图" class="headerlink" title="3、点阵图 vs 矢量图"></a>3、点阵图 vs 矢量图</h4><p>(1) 点阵图(位图、像素图)</p><p>最小单位是像素，缩放会失真</p><p>(2) 矢量图(向量图)</p><p>存储元素形状和颜色的算法，缩放不失真</p><!-- 原文章：https://www.zhihu.com/question/20028452/answer/142593276 -->]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>幽灵空白节点</title>
       <link href="/2020/07/13/%E5%B9%BD%E7%81%B5%E7%A9%BA%E7%99%BD%E8%8A%82%E7%82%B9/"/>
       <url>/2020/07/13/%E5%B9%BD%E7%81%B5%E7%A9%BA%E7%99%BD%E8%8A%82%E7%82%B9/</url>
@@ -1513,7 +1538,7 @@
       
       <categories>
           
-          <category> 数据库 </category>
+          <category> 服务端 </category>
           
       </categories>
       
@@ -2638,14 +2663,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> python </tag>
             
         </tags>
       
@@ -3163,14 +3188,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 经验 </tag>
+            <tag> python </tag>
             
         </tags>
       
@@ -3188,14 +3213,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 文本操作 </tag>
+            <tag> python </tag>
             
         </tags>
       
@@ -3213,14 +3238,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> python </tag>
             
         </tags>
       
@@ -3588,14 +3613,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> django </tag>
+            <tag> python </tag>
             
         </tags>
       
@@ -3638,14 +3663,14 @@
       
       <categories>
           
-          <category> python </category>
+          <category> 服务端 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Django </tag>
+            <tag> python </tag>
             
         </tags>
       
