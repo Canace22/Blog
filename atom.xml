@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-07-14T12:34:32.338Z</updated>
+  <updated>2020-07-15T02:18:37.803Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CSS 基础</title>
+    <link href="https://canace.site/2020/07/15/css%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/"/>
+    <id>https://canace.site/2020/07/15/css%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/</id>
+    <published>2020-07-15T00:51:47.000Z</published>
+    <updated>2020-07-15T02:18:37.803Z</updated>
+    
+    <summary type="html">
+    
+      《CSS 世界》第二章，一些 CSS 基本术语解释
+    
+    </summary>
+    
+    
+      <category term="读书笔记" scheme="https://canace.site/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="css" scheme="https://canace.site/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS 历史及文档流</title>
     <link href="https://canace.site/2020/07/14/CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/"/>
     <id>https://canace.site/2020/07/14/CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/</id>
     <published>2020-07-14T12:13:23.000Z</published>
-    <updated>2020-07-14T12:34:32.338Z</updated>
+    <updated>2020-07-15T02:16:39.746Z</updated>
     
     <summary type="html">
     
@@ -30,7 +51,7 @@
     </summary>
     
     
-      <category term="web" scheme="https://canace.site/categories/web/"/>
+      <category term="读书笔记" scheme="https://canace.site/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
       <category term="css" scheme="https://canace.site/tags/css/"/>
@@ -42,7 +63,7 @@
     <link href="https://canace.site/2020/07/14/%E5%B8%B8%E7%94%A8%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%AF%94%E8%BE%83/"/>
     <id>https://canace.site/2020/07/14/%E5%B8%B8%E7%94%A8%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%AF%94%E8%BE%83/</id>
     <published>2020-07-14T00:40:53.000Z</published>
-    <updated>2020-07-14T12:36:50.571Z</updated>
+    <updated>2020-07-15T00:50:51.474Z</updated>
     
     <summary type="html">
     
@@ -412,27 +433,6 @@
     
     
       <category term="gitbook" scheme="https://canace.site/tags/gitbook/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Webpack+gulp 打包 Vue 组件库</title>
-    <link href="https://canace.site/2020/05/15/webpack-gulp%E6%89%93%E5%8C%85vue%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
-    <id>https://canace.site/2020/05/15/webpack-gulp%E6%89%93%E5%8C%85vue%E7%BB%84%E4%BB%B6%E5%BA%93/</id>
-    <published>2020-05-15T00:44:46.000Z</published>
-    <updated>2020-07-01T02:07:13.205Z</updated>
-    
-    <summary type="html">
-    
-      参照 element-ui 实现按需引入的 vue 组件库
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="vue 组件库" scheme="https://canace.site/tags/vue-%E7%BB%84%E4%BB%B6%E5%BA%93/"/>
     
   </entry>
   

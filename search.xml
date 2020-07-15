@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CSS 基础</title>
+      <link href="/2020/07/15/css%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/"/>
+      <url>/2020/07/15/css%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、CSS-是怎么组织的"><a href="#一、CSS-是怎么组织的" class="headerlink" title="一、CSS 是怎么组织的"></a>一、CSS 是怎么组织的</h3><p>先看一段 demo：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面的 demo 是我们常见的 CSS 代码，那么他是如何组织的呢？首先，可以看到花括号里面有 width, height 之类的描述词，这种描述词就是 <strong>CSS 属性</strong>，而 width， height 后面会有进一步细化的描述，20px, 30px 等，这就是<strong>属性值</strong>。每一个属性值对后面都有个分号，比如，”width: 20px;”，我们称这是一条 CSS <strong>声明</strong>。所有的 CSS 声明被放在了一个大的花括号里，花括号以及它所包含的声明，被称为 CSS <strong>声明块</strong>。而一段 CSS 名称 + 后面紧跟的块，形成一个 CSS <strong>规则集</strong>。</p><h3 id="二、CSS-属性值的常用类型"><a href="#二、CSS-属性值的常用类型" class="headerlink" title="二、CSS 属性值的常用类型"></a>二、CSS 属性值的常用类型</h3><h4 id="一-、距离值-数值-长度单位"><a href="#一-、距离值-数值-长度单位" class="headerlink" title="(一)、距离值(数值 + 长度单位)"></a>(一)、距离值(数值 + 长度单位)</h4><h5 id="1、相对长度单位"><a href="#1、相对长度单位" class="headerlink" title="1、相对长度单位"></a>1、相对长度单位</h5><p>(1) 文字长度单位</p><ul><li><p>ch, 字符’0’（Unicode值是U+0030）所占据的宽度</p></li><li><p>em, 元素的计算字体大小。如果用于字体大小属性本身，则表示元素的继承字体大小</p></li><li><p>ex, 元素当前的x-height，也就是字母’x’的高度</p></li><li><p>rem， 相对于根元素的字体大小</p></li><li><p>rlh， 相对于根元素的行高大小</p></li></ul><p>(2) 视区长度单位</p><ul><li><p>vh, 浏览器窗口视区 1% 的高度</p></li><li><p>vw, 浏览器窗口视区 1% 的宽度</p></li><li><p>vmin, 等于 vh 和 vw 较小的值</p></li><li><p>vmax, 等于 vh 和 vw 较大的值</p></li></ul><h5 id="2、绝对长度单位"><a href="#2、绝对长度单位" class="headerlink" title="2、绝对长度单位"></a>2、绝对长度单位</h5><ul><li><p>px, 对于屏幕显示，1 像素通常表示一个设备像素（点）。然而，对于打印机和高分辨率屏幕，一个CSS像素意味着多个设备像素。1px=1英寸的1/96。</p></li><li><p>cm, 厘米，1cm = 96px/2.54</p></li><li><p>mm, 毫米，1mm = 1cm/10 = 96px/2.54/10</p></li><li><p>in, 英寸, 1in = 2.54cm = 96px</p></li><li><p>pc, 派卡，1pc = 12pt = 1in/6</p></li><li><p>pt, 点，1pt = 1in/72</p></li></ul><h4 id="二-角度值-数值-角度单位"><a href="#二-角度值-数值-角度单位" class="headerlink" title="(二) 角度值(数值 + 角度单位)"></a>(二) 角度值(数值 + 角度单位)</h4><p>1、deg，度，一个完整的圆是 360 deg</p><p>2、grad, 百分度，角的测量单位， 一个完整的圆是 400 grad</p><p>3、rad，弧度，弧长与半径之比，一个完整的圆是 2π 弧度, 大约是 6.2832rad, 1rad = 180 / π</p><p>4、turn，圈数，一个完整的圆是 1turn, 1/4 圆是 0.25turn</p><h4 id="三-颜色值"><a href="#三-颜色值" class="headerlink" title="(三) 颜色值"></a>(三) 颜色值</h4><p>1、颜色值关键字，颜色值的英文单词，比如: ‘red’, ‘blue’等，目前共有 147 个，详细颜色值<a href="https://www.zhangxinxu.com/wordpress/2010/08/css3%e4%b8%8b%e7%9a%84147%e4%b8%aa%e9%a2%9c%e8%89%b2%e5%90%8d%e7%a7%b0%e5%8f%8a%e5%af%b9%e5%ba%94%e9%a2%9c%e8%89%b2%e5%80%bc/" target="_blank" rel="noopener">戳这里</a></p><p>2、transparent, 透明</p><p>3、currentColor, 颜色变量, 当前的标签所继承的文字颜色</p><p>4、RGB 颜色，语法包括：#RRGGBB[AA]，#RGB[A]，rgb<a href="R, G, B[, A]">a</a>以及rgb<a href="R G B[ / A]">a</a></p><p>5、HSL 颜色，语法包括：hsl<a href="H, S, L[, A]">a</a>，以及CSS Colors Level 4中新增的hsl<a href="H S L[ / A]">a</a></p><h4 id="四-百分比值"><a href="#四-百分比值" class="headerlink" title="(四) 百分比值"></a>(四) 百分比值</h4><p>相对于父辈元素对象计算占比</p><h4 id="五-数值"><a href="#五-数值" class="headerlink" title="(五) 数值"></a>(五) 数值</h4><p>数值包括小数和整数，比如 <code>line-height: 1.2</code></p><h4 id="六-关键字"><a href="#六-关键字" class="headerlink" title="(六) 关键字"></a>(六) 关键字</h4><p>比如 <code>border: solid</code> 中的 solid</p><h4 id="七-函数值"><a href="#七-函数值" class="headerlink" title="(七) 函数值"></a>(七) 函数值</h4><p>比如，<code>height: calc(100% - 20px)</code> 中的 “calc(100% - 20px)”</p><h3 id="三、选择器"><a href="#三、选择器" class="headerlink" title="三、选择器"></a>三、选择器</h3><p>1、类选择器，形如: <code>.icon {}</code></p><p>2、ID 选择器, 形如: <code>#title{}</code>, 具有唯一性，不建议一个文档中多处用</p><p>3、属性选择器, 形如: <code>[title~=hello] { color:red; }</code>，这个例子为包含指定值的 title 属性的所有元素设置颜色为红色</p><p>4、伪类选择器, <code>selector : pseudo-class {property: value}</code></p><p>5、伪元素选择器, <code>selector:pseudo-element {property:value;}</code></p><h3 id="四、关系选择器"><a href="#四、关系选择器" class="headerlink" title="四、关系选择器"></a>四、关系选择器</h3><p>1、后代选择器, 形如: <code>#yayunhui h1{}</code>, 该实例会对带有 ‘yayunhui’ ID 的所有子元素 h1 应用样式</p><p>2、子元素选择器, 以 ‘&gt;’ 连接，形如: <code>#wrap&gt;h1 {}</code>，该实例只会对带有 ‘wrap’ ID 的直接子元素 h1 应用样式</p><p>3、兄弟选择器, 以 ‘~’ 连接，形如: <code>.title~h1</code>，该实例会对带有 title 类的所有同级元素应用样式</p><p>4、相邻兄弟选择器,以 ‘+’ 连接, 形如: <code>.title+h1</code>, 该实例只会对带有 title 类的相邻同级元素应用样式</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS 历史及文档流</title>
       <link href="/2020/07/14/CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/"/>
       <url>/2020/07/14/CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/</url>
@@ -13,7 +38,7 @@
       
       <categories>
           
-          <category> web </category>
+          <category> 读书笔记 </category>
           
       </categories>
       
