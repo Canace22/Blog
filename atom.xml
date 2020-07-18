@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-07-15T02:18:37.803Z</updated>
+  <updated>2020-07-18T03:54:56.011Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好玩的 Console</title>
+    <link href="https://canace.site/2020/07/18/%E5%A5%BD%E7%8E%A9%E7%9A%84console/"/>
+    <id>https://canace.site/2020/07/18/%E5%A5%BD%E7%8E%A9%E7%9A%84console/</id>
+    <published>2020-07-18T03:25:26.000Z</published>
+    <updated>2020-07-18T03:54:56.011Z</updated>
+    
+    <summary type="html">
+    
+      一切要从昨天打开知乎控制台说起，昨天打开知乎控制台看到了 acii 图形的打印，比较好奇怎么画出来的，首先想肯定要用 console 吧，那么到底使用什么姿势 console 出来的呢？emmm，然后就有了这个
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS 基础</title>
@@ -412,27 +433,6 @@
     
     
       <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Gitbook 生成电子书</title>
-    <link href="https://canace.site/2020/05/17/gitbook%E7%94%9F%E6%88%90%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
-    <id>https://canace.site/2020/05/17/gitbook%E7%94%9F%E6%88%90%E7%94%B5%E5%AD%90%E4%B9%A6/</id>
-    <published>2020-05-17T05:54:19.000Z</published>
-    <updated>2020-07-01T02:07:13.200Z</updated>
-    
-    <summary type="html">
-    
-      使用 Gitbook CLI, Github Pages, Github Actions CI/CD, 和 Calibre 生成电子书
-    
-    </summary>
-    
-    
-      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
-    
-    
-      <category term="gitbook" scheme="https://canace.site/tags/gitbook/"/>
     
   </entry>
   
