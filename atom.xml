@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-07-28T03:23:53.974Z</updated>
+  <updated>2020-08-02T07:26:18.418Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HTTP 服务器</title>
+    <link href="https://canace.site/2020/08/02/http%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://canace.site/2020/08/02/http%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2020-08-02T07:15:20.000Z</published>
+    <updated>2020-08-02T07:26:18.418Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="服务端" scheme="https://canace.site/categories/%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    
+    
+      <category term="nodeJs" scheme="https://canace.site/tags/nodeJs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Two Sum</title>
-    <link href="https://canace.site/2020/07/28/%E4%B8%A4%E6%95%B0%E6%B1%82%E5%92%8C%E9%97%AE%E9%A2%98/"/>
-    <id>https://canace.site/2020/07/28/%E4%B8%A4%E6%95%B0%E6%B1%82%E5%92%8C%E9%97%AE%E9%A2%98/</id>
-    <published>2020-07-28T02:41:30.000Z</published>
-    <updated>2020-07-28T03:23:53.974Z</updated>
+    <link href="https://canace.site/2020/07/29/%E4%B8%A4%E6%95%B0%E6%B1%82%E5%92%8C%E9%97%AE%E9%A2%98/"/>
+    <id>https://canace.site/2020/07/29/%E4%B8%A4%E6%95%B0%E6%B1%82%E5%92%8C%E9%97%AE%E9%A2%98/</id>
+    <published>2020-07-29T02:41:30.000Z</published>
+    <updated>2020-07-29T01:20:15.061Z</updated>
     
     <summary type="html">
     
@@ -422,27 +449,6 @@
     <summary type="html">
     
       CommonJS、AMD、RequireJS、CMD 以及 ES6 规范比较
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="js" scheme="https://canace.site/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Proxy 实现观察者模式</title>
-    <link href="https://canace.site/2020/05/28/proxy%E5%AE%9E%E7%8E%B0%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/"/>
-    <id>https://canace.site/2020/05/28/proxy%E5%AE%9E%E7%8E%B0%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/</id>
-    <published>2020-05-28T02:11:14.000Z</published>
-    <updated>2020-07-01T02:07:13.203Z</updated>
-    
-    <summary type="html">
-    
-      使用 es6 Proxy 实现观察者模式
     
     </summary>
     
