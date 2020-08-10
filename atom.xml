@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-08-10T01:46:41.501Z</updated>
+  <updated>2020-08-10T04:02:00.306Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见 Git 工作流程</title>
+    <link href="https://canace.site/2020/08/10/%E5%B8%B8%E8%A7%81git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
+    <id>https://canace.site/2020/08/10/%E5%B8%B8%E8%A7%81git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</id>
+    <published>2020-08-10T02:22:38.000Z</published>
+    <updated>2020-08-10T04:02:00.306Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+      <category term="git" scheme="https://canace.site/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>说说 Vuex</title>
@@ -460,27 +487,6 @@
     
     
       <category term="css" scheme="https://canace.site/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用 Vscode 搞事情</title>
-    <link href="https://canace.site/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/"/>
-    <id>https://canace.site/2020/07/01/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/</id>
-    <published>2020-07-01T00:44:36.000Z</published>
-    <updated>2020-07-01T02:07:13.213Z</updated>
-    
-    <summary type="html">
-    
-      突发奇想，写一篇 vscode 的各种骚操作文章，这些骚操作有些用的多，有些被遗忘在角落，根本想不起来，有必要把他们记录下来。
-    
-    </summary>
-    
-    
-      <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-      <category term="编辑器" scheme="https://canace.site/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
   </entry>
   
