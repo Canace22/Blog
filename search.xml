@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>说说 Vuex</title>
+      <link href="/2020/08/10/%E8%AF%B4%E8%AF%B4vuex/"/>
+      <url>/2020/08/10/%E8%AF%B4%E8%AF%B4vuex/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、为什么要说-Vuex"><a href="#一、为什么要说-Vuex" class="headerlink" title="一、为什么要说 Vuex"></a>一、为什么要说 Vuex</h3><p>上周在做项目的时候，有一个模块用到了一个章节组件，一个 content 组件，其中章节组件调用了一个 tree 组价用来递归章节列表。选中章节组件中的项，需要更新到 content 的已选章节部分，取消章节选项，已选章节也需要删除对应的项，此外，删除已选章节中的某一项，也需要更新左侧章节列表，比如这样：</p><p><img src="/images/vuex-ex.gif" alt="示例"></p><p>我一开始的做法是使用组件间传数据，但是实践之后会发现一些问题，比如选中框是 checkbox 双向数据绑定，这里有三个组件，传来传去的容易绕，状态更新稍有一些逻辑问题可能会找半天。想了一会，去问了前端大佬，感觉豁然开朗，写久了小程序，我竟然把 vuex 给忘了，这种场景不就很适合用 vuex 嘛。 不过归根究底，还是我对 vuex 的使用场景没有研究过，导致用的时候想不起他来，下面就是我研究之后的一些结论啦。</p><h3 id="二、Vuex-应用场景"><a href="#二、Vuex-应用场景" class="headerlink" title="二、Vuex 应用场景"></a>二、Vuex 应用场景</h3><p>中大型单页应用，需要多个组件共享状态的时候，用 Vuex 可以达到事半功倍的效果。这里多个组件需要共享状态，可以有以下两种情况：</p><p>(1) 多个视图依赖于同一状态</p><p>(2) 来自不同视图的行为需要变更同一状态</p><p>比如上面我说的那个例子，章节选中状态和已选章节都是依赖于同一份数据的，并且章节变更需要修改的状态和删除已选章节需要修改的状态也是同一个，这个时候使用 vuex 就再合适不过了。</p><p>中大型应用用 vuex，那么小型应用也有类似的需求要用什么呢？ Vue 教程中状态管理模块给出了一个简单状态管理的 demo，也就是 Vuex 文档中提到的 store 模式，该模式参照 Flux 实现了 action 触发 state 变更，state 触发视图更新的逻辑，以达到多个组件共同维护一份数据的目的。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// store 模式</span></span><br><span class="line"><span class="keyword">var</span> store = &#123;</span><br><span class="line">  debug: <span class="literal">true</span>,</span><br><span class="line">  state: &#123;</span><br><span class="line">    message: <span class="string">'Hello!'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  setMessageAction (newValue) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.debug) <span class="built_in">console</span>.log(<span class="string">'setMessageAction triggered with'</span>, newValue)</span><br><span class="line">    <span class="keyword">this</span>.state.message = newValue</span><br><span class="line">  &#125;,</span><br><span class="line">  clearMessageAction () &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.debug) <span class="built_in">console</span>.log(<span class="string">'clearMessageAction triggered'</span>)</span><br><span class="line">    <span class="keyword">this</span>.state.message = <span class="string">''</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多个组件共享一份数据，通过 action 更新 state 中的数据状态</span></span><br><span class="line"><span class="keyword">var</span> vmA = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vmB = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    privateState: &#123;&#125;,</span><br><span class="line">    sharedState: store.state</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="三、Flux"><a href="#三、Flux" class="headerlink" title="三、Flux"></a>三、Flux</h3><p>上面提到了 Flux，那么 Flux 是什么呢？Flux 是一种软件架构思想，facebook 在该思想的基础上实现了 Flux 框架，但是我们这里要讲的是 Vuex 所借鉴的 Flux 思想。Flux 把数据的流动分为四个阶段，View(视图层)、Action(视图层发出的消息)、Dispatcher(用来接收Actions、执行回调函数) 以及 Store(用来存放应用的状态，一旦发生变动，就提醒Views要更新页面)，他们之间的流动方式是这样的：</p><p><img src="/images/flux.png" alt="Flux 数据流"></p><p>从上图可以看出，Flux 思想下的数据流动是单向的</p><p>参考文献：</p><p><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex 是什么？</a></p><p><a href="https://cn.vuejs.org/v2/guide/state-management.html#%E7%AE%80%E5%8D%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E8%B5%B7%E6%AD%A5%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener">类 Flux 状态管理的官方实现</a></p><p><a href="http://www.ruanyifeng.com/blog/2016/01/flux.html" target="_blank" rel="noopener">Flux 架构入门教程</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>原地删除数组中的指定元素</title>
       <link href="/2020/08/04/removeElement/"/>
       <url>/2020/08/04/removeElement/</url>
