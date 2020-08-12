@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>生成指定范围的随机数组</title>
+      <link href="/2020/08/12/%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%BB%84-1/"/>
+      <url>/2020/08/12/%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%BB%84-1/</url>
+      
+        <content type="html"><![CDATA[<p>输入范围，输出随机组成的数组，比如输入 minNum、maxNum、option，返回 minNum 与 maxNum 间的随机数组构成的 option 长度的数组。</p><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>1、 求出随机数的范围 maxNum - minNum + 1</p><p>2、指定范围的随机数算法 Math.random() * len</p><p>3、 遍历 option,若生成的随机数不在 minNum 与 maxNum 范围内，则重新计算，否则，添加随机数到数组</p><p>4、 返回随机数组成的数组</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MakeRandomList</span>(<span class="params">minNum, maxNum, option</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = [];</span><br><span class="line">  <span class="keyword">const</span> len = maxNum - minNum + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; option; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> random = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * len);</span><br><span class="line">    <span class="keyword">if</span> (random &lt; minNum || random &gt; maxNum) &#123;</span><br><span class="line">      i--;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    res.push(random);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = MakeRandomList(<span class="number">2</span>, <span class="number">6</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithmn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常见 Git 工作流程</title>
       <link href="/2020/08/10/%E5%B8%B8%E8%A7%81git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
       <url>/2020/08/10/%E5%B8%B8%E8%A7%81git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
