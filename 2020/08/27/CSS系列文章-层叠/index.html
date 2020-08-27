@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="分享改变世界"><title>CSS 系列文章 —— 层叠 | Canace 的博客</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">CSS 系列文章 —— 层叠</h1><a id="logo" href="/.">Canace 的博客</a><p class="description">虽然知道万事皆空，仍然能够生活得兴致勃勃</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 主页</i></a><a href="/archives/"><i class="fa fa-archive"> 文章归档</i></a><a href="/about/"><i class="fa fa-user"> 关于我</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">CSS 系列文章 —— 层叠</h1><div class="post-meta">Aug 27, 2020<span> | </span><span class="category"><a href="/categories/web/">web</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 440</span><span class="post-meta-item-text"> 字</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-hourglass-half"></i><span class="post-count"> 1</span><span class="post-meta-item-text"> 分钟</span></span></span></div><a class="disqus-comment-count" data-disqus-identifier="2020/08/27/CSS系列文章-层叠/" href="/2020/08/27/CSS系列文章-层叠/#disqus_thread"></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、层叠上下文"><span class="toc-text">一、层叠上下文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、层叠顺序"><span class="toc-text">二、层叠顺序</span></a></li></ol></div></div><div class="post-content"><h3 id="一、层叠上下文"><a href="#一、层叠上下文" class="headerlink" title="一、层叠上下文"></a>一、层叠上下文</h3><p>1、<strong>特性</strong></p>
+<p>(1) 层叠上下文的层叠水平要比普通元素高</p>
+<p>(2) 层叠上下文可以阻断元素的混合模式</p>
+<p>(3) 层叠上下文可以嵌套，内部层叠上下文及其所有子元素均受制于外部的“层叠上下文”</p>
+<p>(4) 每个层叠上下文和兄弟元素独立，也就是说，当进行层叠变化或渲染的时候，只需要考虑后代元素</p>
+<p>(5) 每个层叠上下文是自成体系的，当元素发生层叠的时候，整个元素被认为是在父层叠上下文的层叠顺序中</p>
+<p>2、<strong>创建</strong></p>
+<p>(1) 页面根元素默认具有层叠上下文，称为根层叠上下文</p>
+<p>(2) z-index 值为数值的定位元素</p>
+<p>(3) 其他 CSS3 属性</p>
+<ul>
+<li><p>元素为 flex 布局元素(父元素 display:flex|inline-flex)，同时 z-index值不是 auto</p>
+</li>
+<li><p>元素的 opacity 值不是 1</p>
+</li>
+<li><p>元素的 transform 值不是 none</p>
+</li>
+<li><p>元素 mix-blend-mode 值不是 normal</p>
+</li>
+<li><p>元素的 filter 值不是 none</p>
+</li>
+<li><p>元素的 isolation 值是 isolate</p>
+</li>
+<li><p>元素的 will-change 属性值为上面 2~6 的任意一个</p>
+</li>
+<li><p>元素的-webkit-overflow-scrolling 设为 touch</p>
+</li>
+</ul>
+<h3 id="二、层叠顺序"><a href="#二、层叠顺序" class="headerlink" title="二、层叠顺序"></a>二、层叠顺序</h3><p>1、若层叠上下文元素不依赖 z-index 数值，则其层叠顺序是 z-index:auto，可看成 z:index:0 级别</p>
+<p>2、若层叠上下文元素依赖 z-index 数值，则其层叠顺序由 z-index 值决定</p>
+<p>3、兄弟层叠顺序一样，后者会覆盖前者，在上面</p>
+<p>4、<strong>z-index 负值</strong></p>
+<p>(1) 层叠顺序在层叠上下文元素的背景色之上，块状元素之下</p>
+<p>(2) <strong>应用</strong></p>
+<ul>
+<li><p>可访问性隐藏</p>
+</li>
+<li><p>IE8 下的多背景模拟</p>
+</li>
+<li><p>定位在元素的后面 </p>
+</li>
+</ul>
+</div><div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>Canace</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="/2020/08/27/CSS系列文章-层叠/">https://canace.site/2020/08/27/CSS系列文章-层叠/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>转载请注明出处</li></ul></div><br><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a class="article-share-link" data-url="https://canace.site/2020/08/27/CSS系列文章-层叠/" data-id="ckec94w7g000g7kr6bsfxn3p1" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNElEQVR42u3awa7CMAxEUf7/p4v0ViBIOjMO1atzs0IFQg4Ly7H9eMjr+Fuvr1+fjD7/uUbv6juXFgwYMG7LOKbrk+HuNj/i/IlyNhgwYOzDcIPs6Ofnz+f76H8fDBgwYIx+QAmpa/M3GDBgwPhFwM0CtPvXwIABY0+GXiBTDprtedFdHAYMGDdkZI2Ba17/vL8BAwaMf884zKUE33pZzT4VDBgwWjOU66j+PEsE3cbnMBzDgAGjKcMt98+vkVm5PxvIeHsOAwaM1gz9srqqDakUzpTQHN65YcCAcVuG21zUy/QZLwvKMGDA6M1Q4rHyro50Byz09BQGDBj9GMqX9UQtS/jcRPDLmWHAgNGakY18SSmakCa6bYmT3WDAgNGa4Q6BKQdSXuvvGhkuDBgwtmGsajTqhbls7AMGDBg7MOrBzk3sjGk1/WoNAwaM1gy3rKYPjbmtx+xyCwMGjH0Y9QGL+nCGG+5hwICxDyMrhLmlNHdnO0zDgAGjNaMyPFFPB/UdDAAMGDDaMfQt6qFQvx6H4RUGDBitGdckf9mFVmp/woABozUjq8+5bUu3wZCNgMCAAaMro1LKX5VoGuMUoxAPAwaM1gx9uUmhfgHO2gYhBgYMGLdl6OMU9dCpF/3t/xsGDBgbMNx2ZtaYrF+ATxqZMGDA2J6RBW63IaGkkl92hgEDBgwhUNYTQeW3Ti6xMGDAaM1QDuEW8bNQG95YYcCA0Zqx4AIZjWgogOxbMGDAaMR4AtL5qHZYD3JFAAAAAElFTkSuQmCC">分享</a><div class="tags"><a href="/tags/css/">css</a></div><div class="post-nav"><a class="pre" href="/2020/08/27/CSS系列文章-文本处理/">CSS 系列文章 —— 文本处理</a><a class="next" href="/2020/08/27/CSS系列文章-流的破坏与保护/">CSS 系列文章 —— 流的破坏与保护</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://canace.site/2020/08/27/CSS系列文章-层叠/';
+    this.page.identifier = '2020/08/27/CSS系列文章-层叠/';
+    this.page.title = 'CSS 系列文章 —— 层叠';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//liu-yan-ping-de-bo-ke.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//liu-yan-ping-de-bo-ke.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://liu-yan-ping-de-bo-ke.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="站内搜索" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web/">web</a><span class="category-list-count">110</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/博客/">博客</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/服务端/">服务端</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/深度学习/">深度学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/系统/">系统</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/语言/">语言</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/阅读笔记/">阅读笔记</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目管理/">项目管理</a><span class="category-list-count">12</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 我的项目</i></div><ul></ul><a href="https://canace22.github.io/Demos/#/" title="demos" target="_blank">demos</a><ul></ul><a href="https://github.com/learningStack/leetcode-note" title="算法" target="_blank">算法</a><ul></ul><a href="https://canace22.github.io/softwareengineering/" title="原创书籍" target="_blank">原创书籍</a></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/性能优化/" style="font-size: 15px;">性能优化</a> <a href="/tags/CKeditor/" style="font-size: 15px;">CKeditor</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/angular/" style="font-size: 15px;">angular</a> <a href="/tags/KNN/" style="font-size: 15px;">KNN</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/科普/" style="font-size: 15px;">科普</a> <a href="/tags/http/" style="font-size: 15px;">http</a> <a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/bash/" style="font-size: 15px;">bash</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/egg/" style="font-size: 15px;">egg</a> <a href="/tags/algorithmn/" style="font-size: 15px;">algorithmn</a> <a href="/tags/gitbook/" style="font-size: 15px;">gitbook</a> <a href="/tags/ci/" style="font-size: 15px;">ci</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/mac/" style="font-size: 15px;">mac</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/文本转换/" style="font-size: 15px;">文本转换</a> <a href="/tags/nodeJs/" style="font-size: 15px;">nodeJs</a> <a href="/tags/数据结构/" style="font-size: 15px;">数据结构</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/矩阵/" style="font-size: 15px;">矩阵</a> <a href="/tags/npm/" style="font-size: 15px;">npm</a> <a href="/tags/PixiJs/" style="font-size: 15px;">PixiJs</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/科学上网/" style="font-size: 15px;">科学上网</a> <a href="/tags/编辑器/" style="font-size: 15px;">编辑器</a> <a href="/tags/ts/" style="font-size: 15px;">ts</a> <a href="/tags/tensorflow/" style="font-size: 15px;">tensorflow</a> <a href="/tags/环境配置/" style="font-size: 15px;">环境配置</a> <a href="/tags/vscode/" style="font-size: 15px;">vscode</a> <a href="/tags/vue-组件库/" style="font-size: 15px;">vue 组件库</a> <a href="/tags/web安全/" style="font-size: 15px;">web安全</a> <a href="/tags/wordpress/" style="font-size: 15px;">wordpress</a> <a href="/tags/笔记/" style="font-size: 15px;">笔记</a> <a href="/tags/个人管理/" style="font-size: 15px;">个人管理</a> <a href="/tags/分页/" style="font-size: 15px;">分页</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a> <a href="/tags/经验/" style="font-size: 15px;">经验</a> <a href="/tags/影评/" style="font-size: 15px;">影评</a> <a href="/tags/开发风格/" style="font-size: 15px;">开发风格</a> <a href="/tags/小程序/" style="font-size: 15px;">小程序</a> <a href="/tags/正则/" style="font-size: 15px;">正则</a> <a href="/tags/日语/" style="font-size: 15px;">日语</a> <a href="/tags/分享/" style="font-size: 15px;">分享</a> <a href="/tags/翻页/" style="font-size: 15px;">翻页</a> <a href="/tags/系统操作/" style="font-size: 15px;">系统操作</a> <a href="/tags/项目管理/" style="font-size: 15px;">项目管理</a> <a href="/tags/3D/" style="font-size: 15px;">3D</a> <a href="/tags/跨域/" style="font-size: 15px;">跨域</a> <a href="/tags/项目模块化/" style="font-size: 15px;">项目模块化</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-文本处理/">CSS 系列文章 —— 文本处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-层叠/">CSS 系列文章 —— 层叠</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-流的破坏与保护/">CSS 系列文章 —— 流的破坏与保护</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-盒尺寸/">CSS 系列文章——盒尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-CSS 中的流与尺寸/">CSS 系列文章——CSS 中的流与尺寸</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-内联元素与流/">CSS 系列文章 —— 内联元素与流</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-CSS 基础知多少/">CSS 系列文章——CSS 基础知多少</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/27/CSS系列文章-CSS历史及文档流/">CSS 系列文章——CSS历史及文档流</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/22/常用正则表达式/">常用正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/08/17/web安全/">Web 安全概述</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Canace.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" color="160,160,160" opacity="0.5" zindex="-1" count="50" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
