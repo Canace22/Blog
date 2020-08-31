@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-08-27T03:31:28.527Z</updated>
+  <updated>2020-08-31T07:02:06.761Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS 小技巧</title>
+    <link href="https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
+    <published>2020-08-31T07:02:22.000Z</published>
+    <updated>2020-08-31T07:02:06.761Z</updated>
+    
+    <summary type="html">
+    
+      本文收录日常开发中一些 css 小技巧，包括文本处理、导航栏样式等。
+    
+    </summary>
+    
+    
+      <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+      <category term="css" scheme="https://canace.site/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS 系列文章 —— 文本处理</title>
@@ -526,33 +547,6 @@
     
     
       <category term="vue" scheme="https://canace.site/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>原地删除数组中的指定元素</title>
-    <link href="https://canace.site/2020/08/04/removeElement/"/>
-    <id>https://canace.site/2020/08/04/removeElement/</id>
-    <published>2020-08-04T01:54:56.000Z</published>
-    <updated>2020-08-13T05:44:38.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="https://canace.site/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
     
   </entry>
   
