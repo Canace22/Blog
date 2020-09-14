@@ -4,9 +4,34 @@
   
     
     <entry>
+      <title>three.js 基础实战</title>
+      <link href="/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/"/>
+      <url>/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、场景创建"><a href="#一、场景创建" class="headerlink" title="一、场景创建"></a>一、场景创建</h3><p>要显示一个画面需要有以下三个元素: scene, camera 和 renderer，renderer 渲染器是根据 scene 和 camera 进行渲染的</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建 scene</span></span><br><span class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene();</span><br><span class="line"><span class="comment">// 创建 camera</span></span><br><span class="line"><span class="keyword">const</span> fov = <span class="number">75</span>;</span><br><span class="line"><span class="keyword">const</span> aspect = <span class="number">2</span>; <span class="comment">// the canvas default</span></span><br><span class="line"><span class="keyword">const</span> near = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> far = <span class="number">0.1</span>;</span><br><span class="line"><span class="keyword">const</span> camera = <span class="keyword">new</span> THREE.PerspectiveCamera(fov, aspect, near, far);</span><br><span class="line">camera.position.z = <span class="number">5</span>;</span><br><span class="line"><span class="comment">// 创建渲染器</span></span><br><span class="line"><span class="keyword">const</span> canvas = <span class="built_in">document</span>.querySelector(<span class="string">&quot;#c&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123; canvas &#125;);</span><br><span class="line">renderer.setSize(<span class="built_in">window</span>.innerWidth, <span class="built_in">window</span>.innerHeight, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure><h3 id="二、添加物体"><a href="#二、添加物体" class="headerlink" title="二、添加物体"></a>二、添加物体</h3><p>1、通过 BoxGeometry 对象创建一个正方体实例</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> boxWidth = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> boxHeight = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> boxDepth = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> geometry = <span class="keyword">new</span> THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);</span><br></pre></td></tr></table></figure><p>2、创建一个基础材质实例</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> material = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123; <span class="attr">color</span>: <span class="number">0x44aa88</span> &#125;);</span><br></pre></td></tr></table></figure><p>3、创建一个网格实例，里面包含上述正方体和材质</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cube = <span class="keyword">new</span> THREE.Mesh(geometry, material);</span><br></pre></td></tr></table></figure><p>4、把正方体添加到场景里</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">scene.add(cube);</span><br></pre></td></tr></table></figure><p>以上把一个网格模式下的正方体添加到了画布上，不难看出 three.js 的组织方式可以用下图表示</p><p><img src="/images/threejs-1cube-no-light-scene.svg" alt="three.js 组织方式"></p><h3 id="三、渲染物体"><a href="#三、渲染物体" class="headerlink" title="三、渲染物体"></a>三、渲染物体</h3><p>以上只是把物体加到了画布上，但是并没有渲染, 下面我们来看 three.js 的渲染方式</p><p>1、静态渲染，这会使物体看起来就像 2d 一样</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">renderer.render(scene, camera);</span><br></pre></td></tr></table></figure><p>2、动态渲染，使物体看起来更有 3d 效果</p><p>使用 requestAnimationFrame api 一帧一帧的渲染场景，同时在每一帧旋转一下正方体</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">time</span>) </span>&#123;</span><br><span class="line">  time *= <span class="number">0.001</span>; <span class="comment">// convert time to seconds</span></span><br><span class="line">  cube.rotation.x = time;</span><br><span class="line">  cube.rotation.y = time;</span><br><span class="line">  renderer.render(scene, camera);</span><br><span class="line">  requestAnimationFrame(render);</span><br><span class="line">&#125;</span><br><span class="line">requestAnimationFrame(render);</span><br></pre></td></tr></table></figure><h3 id="四、添加光线"><a href="#四、添加光线" class="headerlink" title="四、添加光线"></a>四、添加光线</h3><p>为了使正方形看起来更加有立体感，我们可以给他加点光线，在加光线之前，我们需要先把目前的材质替换成可以受光影响的材质</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// const material = new THREE.MeshBasicMaterial(&#123; color: 0x44aa88 &#125;);</span></span><br><span class="line"><span class="keyword">const</span> material = <span class="keyword">new</span> THREE.MeshPhongMaterial(&#123; <span class="attr">color</span>: <span class="number">0x44aa88</span> &#125;); <span class="comment">// 这种材质会受光线影响</span></span><br></pre></td></tr></table></figure><p>替换了材质之后就可以添加光线了</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> color = <span class="number">0xfffff0</span>;</span><br><span class="line"><span class="keyword">const</span> intensity = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> light = <span class="keyword">new</span> THREE.DirectionalLight(color, intensity);</span><br><span class="line">light.position.set(<span class="number">-1</span>, <span class="number">2</span>, <span class="number">4</span>);</span><br><span class="line">scene.add(light);</span><br></pre></td></tr></table></figure><h3 id="五、检测浏览器是否支持-webGL"><a href="#五、检测浏览器是否支持-webGL" class="headerlink" title="五、检测浏览器是否支持 webGL"></a>五、检测浏览器是否支持 webGL</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (WEBGL.isWebGLAvailable()) &#123;</span><br><span class="line">  requestAnimationFrame(render);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> warning = WEBGL.getWebGLErrorMessage();</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">&quot;container&quot;</span>).appendChild(warning);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>参考文档:</p><p><a href="https://threejsfundamentals.org/threejs/lessons/threejs-fundamentals.html">Three.js Fundamentals</a></p><p><a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene">Creating a scene</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> three.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用正则表达式</title>
-      <link href="/2020/10/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-      <url>/2020/10/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      <link href="/2020/09/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <url>/2020/09/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
       
         <content type="html"><![CDATA[<h3 id="1、-html-相关"><a href="#1、-html-相关" class="headerlink" title="1、 html 相关"></a>1、 html 相关</h3><p>(1) 去掉所有 html 标签，并保留内容: <code>/&lt;[^&gt;]+&gt;/g</code></p><p>(2) 去除 html 注释并删除其中的内容: <code>/&lt;!--[\s\S]*--&gt;/g</code></p><h3 id="2、-字符串匹配"><a href="#2、-字符串匹配" class="headerlink" title="2、 字符串匹配"></a>2、 字符串匹配</h3><p>(1) 匹配任意空白字符: <code>/\s+/</code></p><p>(2) 匹配中文字符: <code>[\u4E00-\u9FA5]+</code></p><h3 id="3、-字符截取"><a href="#3、-字符截取" class="headerlink" title="3、 字符截取"></a>3、 字符截取</h3><p>(1) 截取两个字符串之间的内容 </p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strSplitBetween</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">  str = str.match(<span class="regexp">/3(\S*)d/</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">return</span> str</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = strSplitBetween(<span class="string">&#x27;21312tsdasd&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">// 12tsdas</span></span><br></pre></td></tr></table></figure><p>(2) 截取某个字符串前面的内容，同上，不过拿掉了前面的字符串</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strSplitBefore</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  str = str.match(<span class="regexp">/(\S*)d/</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = strSplitBefore(<span class="string">&quot;21312tsdasd&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test); <span class="comment">// 21312tsdas</span></span><br></pre></td></tr></table></figure><p>(3) 截取某个字符串后面的内容，第一个示例拿掉后面的字符</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strSplitafter</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  str = str.match(<span class="regexp">/12(\S*)/</span>)[<span class="number">1</span>];</span><br><span class="line">  <span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = strSplitafter(<span class="string">&quot;21312tsdasd&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(test);  <span class="comment">// tsdasd</span></span><br></pre></td></tr></table></figure>]]></content>
       
@@ -1445,7 +1470,7 @@
       
         <tags>
             
-            <tag> PixiJs </tag>
+            <tag> pixi.js </tag>
             
         </tags>
       
@@ -1520,7 +1545,7 @@
       
         <tags>
             
-            <tag> PixiJs </tag>
+            <tag> pixi.js </tag>
             
         </tags>
       
@@ -2295,7 +2320,7 @@
       
         <tags>
             
-            <tag> PixiJs </tag>
+            <tag> pixi.js </tag>
             
         </tags>
       
