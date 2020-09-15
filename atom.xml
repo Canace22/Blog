@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-09-14T08:20:39.849Z</updated>
+  <updated>2020-09-15T10:02:11.785Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>three.js 基础实战</title>
+    <title>前端 Docker 指南</title>
+    <link href="https://canace.site/2020/09/15/docker%E6%8C%87%E5%8D%97/"/>
+    <id>https://canace.site/2020/09/15/docker%E6%8C%87%E5%8D%97/</id>
+    <published>2020-09-15T10:00:49.000Z</published>
+    <updated>2020-09-15T10:02:11.785Z</updated>
+    
+    
+    <summary type="html">docker 在前端自动化部署中经常用到，平常都是别人配置好的，只其所以不知其然，自己走一遍，做个笔记</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="docker" scheme="https://canace.site/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>three.js 基础实战 —— 创建画布</title>
     <link href="https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/"/>
     <id>https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-14T07:54:50.000Z</published>
-    <updated>2020-09-14T08:20:39.849Z</updated>
+    <updated>2020-09-15T01:15:25.621Z</updated>
     
     
       
@@ -466,31 +485,6 @@
     <id>https://canace.site/2020/08/13/%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</id>
     <published>2020-08-13T00:55:54.000Z</published>
     <updated>2020-08-13T05:44:38.338Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="阅读笔记" scheme="https://canace.site/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="笔记" scheme="https://canace.site/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>美句摘抄</title>
-    <link href="https://canace.site/2020/08/13/%E5%8F%A5%E5%AD%90%E6%91%98%E6%8A%84/"/>
-    <id>https://canace.site/2020/08/13/%E5%8F%A5%E5%AD%90%E6%91%98%E6%8A%84/</id>
-    <published>2020-08-13T00:53:27.000Z</published>
-    <updated>2020-08-13T05:44:38.343Z</updated>
     
     
       
