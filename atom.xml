@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Canace 的博客</title>
   
-  <subtitle>虽然知道万事皆空，仍然能够生活得兴致勃勃</subtitle>
+  <subtitle>软件工程没有银弹</subtitle>
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-09-16T01:16:51.736Z</updated>
+  <updated>2020-10-07T01:38:16.134Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>函数式编程</title>
+    <link href="https://canace.site/2020/09/24/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
+    <id>https://canace.site/2020/09/24/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</id>
+    <published>2020-09-24T08:52:40.000Z</published>
+    <updated>2020-10-07T01:38:16.134Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端 Docker 指南</title>
     <link href="https://canace.site/2020/09/16/docker%E6%8C%87%E5%8D%97/"/>
     <id>https://canace.site/2020/09/16/docker%E6%8C%87%E5%8D%97/</id>
     <published>2020-09-16T01:16:49.000Z</published>
-    <updated>2020-09-16T01:16:51.736Z</updated>
+    <updated>2020-09-24T08:41:35.693Z</updated>
     
     
     <summary type="html">docker 在前端自动化部署中经常用到，平常都是别人配置好的，只其所以不知其然，自己走一遍，做个笔记</summary>
@@ -40,7 +65,7 @@
     <link href="https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/"/>
     <id>https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-14T07:54:50.000Z</published>
-    <updated>2020-09-15T01:15:25.621Z</updated>
+    <updated>2020-09-24T08:41:42.665Z</updated>
     
     
       
@@ -460,31 +485,6 @@
     <id>https://canace.site/2020/08/13/%E7%89%B9%E6%B5%93%E9%B8%A1%E6%B1%A4/</id>
     <published>2020-08-13T00:59:09.000Z</published>
     <updated>2020-08-13T05:44:38.350Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="阅读笔记" scheme="https://canace.site/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="笔记" scheme="https://canace.site/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一些概念</title>
-    <link href="https://canace.site/2020/08/13/%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/"/>
-    <id>https://canace.site/2020/08/13/%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/</id>
-    <published>2020-08-13T00:55:54.000Z</published>
-    <updated>2020-08-13T05:44:38.338Z</updated>
     
     
       
