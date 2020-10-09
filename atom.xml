@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-10-07T01:38:16.134Z</updated>
+  <updated>2020-10-09T13:15:12.418Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript 基础 —— 类型转换</title>
+    <link href="https://canace.site/2020/10/09/javascript%E5%9F%BA%E7%A1%80-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
+    <id>https://canace.site/2020/10/09/javascript%E5%9F%BA%E7%A1%80-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</id>
+    <published>2020-10-09T02:42:19.000Z</published>
+    <updated>2020-10-09T13:15:12.418Z</updated>
+    
+    
+    <summary type="html">javascript 基础系列之类型转换，顾名思义，梳理一下类型转换相关的知识点</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>函数式编程</title>
     <link href="https://canace.site/2020/09/24/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     <id>https://canace.site/2020/09/24/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</id>
     <published>2020-09-24T08:52:40.000Z</published>
-    <updated>2020-10-07T01:38:16.134Z</updated>
+    <updated>2020-10-09T13:15:12.425Z</updated>
     
     
       
@@ -46,7 +65,7 @@
     <link href="https://canace.site/2020/09/16/docker%E6%8C%87%E5%8D%97/"/>
     <id>https://canace.site/2020/09/16/docker%E6%8C%87%E5%8D%97/</id>
     <published>2020-09-16T01:16:49.000Z</published>
-    <updated>2020-09-24T08:41:35.693Z</updated>
+    <updated>2020-10-09T13:15:12.414Z</updated>
     
     
     <summary type="html">docker 在前端自动化部署中经常用到，平常都是别人配置好的，只其所以不知其然，自己走一遍，做个笔记</summary>
@@ -65,7 +84,7 @@
     <link href="https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/"/>
     <id>https://canace.site/2020/09/14/three-js%E5%9F%BA%E7%A1%80%E5%AE%9E%E6%88%98/</id>
     <published>2020-09-14T07:54:50.000Z</published>
-    <updated>2020-09-24T08:41:42.665Z</updated>
+    <updated>2020-10-09T13:15:12.423Z</updated>
     
     
       
@@ -90,7 +109,7 @@
     <link href="https://canace.site/2020/09/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>https://canace.site/2020/09/14/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2020-09-14T03:33:47.000Z</published>
-    <updated>2020-09-14T08:21:39.453Z</updated>
+    <updated>2020-10-09T13:15:12.427Z</updated>
     
     
       
@@ -115,7 +134,7 @@
     <link href="https://canace.site/2020/09/09/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/"/>
     <id>https://canace.site/2020/09/09/%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3/</id>
     <published>2020-09-09T03:36:29.000Z</published>
-    <updated>2020-09-10T06:05:52.129Z</updated>
+    <updated>2020-10-09T13:15:12.428Z</updated>
     
     
       
@@ -140,7 +159,7 @@
     <link href="https://canace.site/2020/09/04/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/"/>
     <id>https://canace.site/2020/09/04/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/</id>
     <published>2020-09-04T01:15:17.000Z</published>
-    <updated>2020-09-04T01:49:05.135Z</updated>
+    <updated>2020-10-09T12:29:42.827Z</updated>
     
     
       
@@ -165,7 +184,7 @@
     <link href="https://canace.site/2020/09/02/package-json%E5%AD%97%E6%AE%B5%E5%88%97%E8%A1%A8/"/>
     <id>https://canace.site/2020/09/02/package-json%E5%AD%97%E6%AE%B5%E5%88%97%E8%A1%A8/</id>
     <published>2020-09-02T08:58:59.000Z</published>
-    <updated>2020-09-03T01:46:51.186Z</updated>
+    <updated>2020-10-09T12:29:42.831Z</updated>
     
     
       
@@ -190,7 +209,7 @@
     <link href="https://canace.site/2020/09/01/hexo%E6%94%AF%E6%8C%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/"/>
     <id>https://canace.site/2020/09/01/hexo%E6%94%AF%E6%8C%81%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/</id>
     <published>2020-09-01T02:54:48.000Z</published>
-    <updated>2020-09-01T03:36:12.425Z</updated>
+    <updated>2020-10-09T12:29:42.829Z</updated>
     
     
       
@@ -215,7 +234,7 @@
     <link href="https://canace.site/2020/09/01/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6vs%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
     <id>https://canace.site/2020/09/01/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6vs%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</id>
     <published>2020-09-01T01:25:37.000Z</published>
-    <updated>2020-09-01T05:53:04.459Z</updated>
+    <updated>2020-10-09T12:29:42.837Z</updated>
     
     
       
@@ -240,7 +259,7 @@
     <link href="https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     <id>https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
     <published>2020-08-31T07:02:22.000Z</published>
-    <updated>2020-08-31T07:02:06.761Z</updated>
+    <updated>2020-10-09T12:29:42.825Z</updated>
     
     
     <summary type="html">本文收录日常开发中一些 css 小技巧，包括文本处理、导航栏样式等。</summary>
@@ -259,7 +278,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E5%B1%82%E5%8F%A0/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E5%B1%82%E5%8F%A0/</id>
     <published>2020-08-27T03:25:17.000Z</published>
-    <updated>2020-08-27T03:28:52.640Z</updated>
+    <updated>2020-10-09T12:29:42.827Z</updated>
     
     
       
@@ -284,7 +303,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E6%B5%81%E7%9A%84%E7%A0%B4%E5%9D%8F%E4%B8%8E%E4%BF%9D%E6%8A%A4/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E6%B5%81%E7%9A%84%E7%A0%B4%E5%9D%8F%E4%B8%8E%E4%BF%9D%E6%8A%A4/</id>
     <published>2020-08-27T03:08:17.000Z</published>
-    <updated>2020-08-27T03:21:50.233Z</updated>
+    <updated>2020-10-09T12:29:42.828Z</updated>
     
     
       
@@ -309,7 +328,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E7%9B%92%E5%B0%BA%E5%AF%B8/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E7%9B%92%E5%B0%BA%E5%AF%B8/</id>
     <published>2020-08-27T02:42:17.000Z</published>
-    <updated>2020-08-27T03:24:23.624Z</updated>
+    <updated>2020-10-09T12:29:42.828Z</updated>
     
     
       
@@ -334,7 +353,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E4%B8%AD%E7%9A%84%E6%B5%81%E4%B8%8E%E5%B0%BA%E5%AF%B8/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E4%B8%AD%E7%9A%84%E6%B5%81%E4%B8%8E%E5%B0%BA%E5%AF%B8/</id>
     <published>2020-08-27T02:12:17.000Z</published>
-    <updated>2020-08-27T02:41:40.301Z</updated>
+    <updated>2020-10-09T12:29:42.826Z</updated>
     
     
       
@@ -359,7 +378,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E4%B8%8E%E6%B5%81/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E4%B8%8E%E6%B5%81/</id>
     <published>2020-08-27T02:12:17.000Z</published>
-    <updated>2020-08-27T03:07:44.370Z</updated>
+    <updated>2020-10-09T12:29:42.827Z</updated>
     
     
       
@@ -384,7 +403,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E5%A4%9A%E5%B0%91/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E5%A4%9A%E5%B0%91/</id>
     <published>2020-08-27T02:00:17.000Z</published>
-    <updated>2020-08-27T02:27:00.586Z</updated>
+    <updated>2020-10-09T12:29:42.826Z</updated>
     
     
       
@@ -409,7 +428,7 @@
     <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/"/>
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%E5%8E%86%E5%8F%B2%E5%8F%8A%E6%96%87%E6%A1%A3%E6%B5%81/</id>
     <published>2020-08-27T01:55:17.000Z</published>
-    <updated>2020-08-27T02:27:07.340Z</updated>
+    <updated>2020-10-09T12:29:42.826Z</updated>
     
     
       
@@ -434,7 +453,7 @@
     <link href="https://canace.site/2020/08/17/web%E5%AE%89%E5%85%A8/"/>
     <id>https://canace.site/2020/08/17/web%E5%AE%89%E5%85%A8/</id>
     <published>2020-08-17T01:38:42.000Z</published>
-    <updated>2020-08-22T08:14:00.084Z</updated>
+    <updated>2020-10-09T12:29:42.833Z</updated>
     
     
       
@@ -460,31 +479,6 @@
     <id>https://canace.site/2020/08/13/%E7%A7%91%E6%99%AE/</id>
     <published>2020-08-13T01:00:30.000Z</published>
     <updated>2020-08-13T05:44:38.351Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="阅读笔记" scheme="https://canace.site/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="笔记" scheme="https://canace.site/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>特浓鸡汤</title>
-    <link href="https://canace.site/2020/08/13/%E7%89%B9%E6%B5%93%E9%B8%A1%E6%B1%A4/"/>
-    <id>https://canace.site/2020/08/13/%E7%89%B9%E6%B5%93%E9%B8%A1%E6%B1%A4/</id>
-    <published>2020-08-13T00:59:09.000Z</published>
-    <updated>2020-08-13T05:44:38.350Z</updated>
     
     
       
