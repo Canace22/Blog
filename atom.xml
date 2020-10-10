@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-10-09T13:52:13.333Z</updated>
+  <updated>2020-10-10T02:41:23.106Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript基础 —— 基本数据类型与引用类型的异同</title>
+    <link href="https://canace.site/2020/10/10/javascript%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BC%82%E5%90%8C/"/>
+    <id>https://canace.site/2020/10/10/javascript%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BC%82%E5%90%8C/</id>
+    <published>2020-10-10T01:49:26.000Z</published>
+    <updated>2020-10-10T02:41:23.106Z</updated>
+    
+    
+    <summary type="html">javascript 基础系列之基本数据类型与引用类型的异同</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="js" scheme="https://canace.site/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git 文档</title>
     <link href="https://canace.site/2020/10/09/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>https://canace.site/2020/10/09/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
     <published>2020-10-09T14:00:12.000Z</published>
-    <updated>2020-10-09T13:52:13.333Z</updated>
+    <updated>2020-10-10T00:40:05.499Z</updated>
     
     
     <summary type="html">根据平常经验整理的 git 文档</summary>
@@ -464,31 +483,6 @@
     
     
     <category term="css" scheme="https://canace.site/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web 安全概述</title>
-    <link href="https://canace.site/2020/08/17/web%E5%AE%89%E5%85%A8/"/>
-    <id>https://canace.site/2020/08/17/web%E5%AE%89%E5%85%A8/</id>
-    <published>2020-08-17T01:38:42.000Z</published>
-    <updated>2020-10-09T12:29:42.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="web安全" scheme="https://canace.site/tags/web%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
