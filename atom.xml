@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-10-16T09:59:40.552Z</updated>
+  <updated>2020-10-19T09:07:33.419Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue 单元测试</title>
+    <link href="https://canace.site/2020/10/19/vue-test-unit/"/>
+    <id>https://canace.site/2020/10/19/vue-test-unit/</id>
+    <published>2020-10-19T08:25:02.000Z</published>
+    <updated>2020-10-19T09:07:33.419Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="单元测试" scheme="https://canace.site/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>从浏览器地址栏输入 URL 到界面被渲染出来看前端知识</title>
@@ -442,31 +467,6 @@
     <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0%E4%B8%8E%E6%B5%81/</id>
     <published>2020-08-27T02:12:17.000Z</published>
     <updated>2020-10-09T12:29:42.827Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="css" scheme="https://canace.site/tags/css/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS 系列文章——CSS 基础知多少</title>
-    <link href="https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E5%A4%9A%E5%B0%91/"/>
-    <id>https://canace.site/2020/08/27/CSS%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0-CSS%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E5%A4%9A%E5%B0%91/</id>
-    <published>2020-08-27T02:00:17.000Z</published>
-    <updated>2020-10-09T12:29:42.826Z</updated>
     
     
       
