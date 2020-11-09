@@ -220,7 +220,7 @@
       
         <tags>
             
-            <tag> three.js </tag>
+            <tag> 3D </tag>
             
         </tags>
       
@@ -1070,7 +1070,7 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
+            <tag> 科普 </tag>
             
         </tags>
       
@@ -1445,7 +1445,7 @@
       
         <tags>
             
-            <tag> vue 组件库 </tag>
+            <tag> vue </tag>
             
         </tags>
       
@@ -1820,7 +1820,7 @@
       
         <tags>
             
-            <tag> vscode </tag>
+            <tag> 编辑器 </tag>
             
         </tags>
       
@@ -1895,7 +1895,7 @@
       
         <tags>
             
-            <tag> 跨域 </tag>
+            <tag> web安全 </tag>
             
         </tags>
       
@@ -2220,7 +2220,7 @@
       
         <tags>
             
-            <tag> mac </tag>
+            <tag> 系统操作 </tag>
             
         </tags>
       
@@ -2395,7 +2395,7 @@
       
         <tags>
             
-            <tag> 开发风格 </tag>
+            <tag> 项目管理 </tag>
             
         </tags>
       
@@ -2520,7 +2520,7 @@
       
         <tags>
             
-            <tag> 项目模块化 </tag>
+            <tag> 项目管理 </tag>
             
         </tags>
       
@@ -2545,7 +2545,7 @@
       
         <tags>
             
-            <tag> 开发风格 </tag>
+            <tag> 项目管理 </tag>
             
         </tags>
       
@@ -3095,7 +3095,7 @@
       
         <tags>
             
-            <tag> 翻页 </tag>
+            <tag> 经验 </tag>
             
         </tags>
       
@@ -3133,7 +3133,7 @@
       <link href="/2019/03/30/KNN%E7%AE%97%E6%B3%95/"/>
       <url>/2019/03/30/KNN%E7%AE%97%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p>KNN 算法概述</p><a id="more"></a><h2 id="KNN-算法是做什么的"><a href="#KNN-算法是做什么的" class="headerlink" title="KNN 算法是做什么的"></a>KNN 算法是做什么的</h2><p>KNN 算法， 即 K 最邻近算法，通过对比与临近事物的相似度，可以对具有特征的事物进行分类，也可以根据这些分类，预测下一步的结果。</p><h2 id="KNN-算法步骤"><a href="#KNN-算法步骤" class="headerlink" title="KNN 算法步骤"></a>KNN 算法步骤</h2><p>KNN 算法主要分为三步：</p><h3 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h3><p>找出邻近值，这个邻近值 k 可以是任意数，1， 1000 甚至 10000 都可以。</p><h3 id="二、分类"><a href="#二、分类" class="headerlink" title="二、分类"></a>二、分类</h3><p>用毕达哥拉斯公式算出该对象与邻近值的相似度（该对象与邻近值得距离），并将该对象归到相似度最高的那一个近邻类里。</p><h3 id="三、回归"><a href="#三、回归" class="headerlink" title="三、回归"></a>三、回归</h3><p>重新找到该对象的近邻，算出这些近邻各特征的平均值，形成新的特征组合，即新的对象，这个对象就是预估的结果，也就是通常所说的预测值。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="KNN-算法的实现"><a href="#KNN-算法的实现" class="headerlink" title="KNN 算法的实现"></a>KNN 算法的实现</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 已知所有特征集合，第一个特征为颜色，第二个特征为所属类别</span></span><br><span class="line">L = &#123;<span class="string">&#x27;orange&#x27;</span> : [<span class="number">1</span>, <span class="number">0</span>], <span class="string">&#x27;apple&#x27;</span>: [<span class="number">2</span>, <span class="number">0</span>], <span class="string">&#x27;flower&#x27;</span>: [<span class="number">1</span>, <span class="number">1</span>], <span class="string">&#x27;fish&#x27;</span>: [<span class="number">5</span>, <span class="number">5</span>]&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 未知物体</span></span><br><span class="line">test = [<span class="number">1.1</span>, <span class="number">0</span>]</span><br><span class="line"><span class="comment"># 所有的相似度集合</span></span><br><span class="line">results = []</span><br><span class="line"><span class="comment"># 已知所有水果的集合</span></span><br><span class="line">items = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> L:</span><br><span class="line">    x = L[item][<span class="number">0</span>] - test[<span class="number">0</span>]</span><br><span class="line">    y = L[item][<span class="number">1</span>] - test[<span class="number">1</span>]</span><br><span class="line">    instance = x ** <span class="number">2</span> + y ** <span class="number">2</span></span><br><span class="line">    results.append(instance ** <span class="number">0.5</span>)</span><br><span class="line">    items.append(item)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最大相似度</span></span><br><span class="line">minValue = min(results)</span><br><span class="line"><span class="comment"># 物体名称</span></span><br><span class="line">result = items[results.index(minValue)]</span><br><span class="line"></span><br><span class="line">print(minValue, result)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="KNN-算法是做什么的"><a href="#KNN-算法是做什么的" class="headerlink" title="KNN 算法是做什么的"></a>KNN 算法是做什么的</h2><p>KNN 算法， 即 K 最邻近算法，通过对比与临近事物的相似度，可以对具有特征的事物进行分类，也可以根据这些分类，预测下一步的结果。</p><h2 id="KNN-算法步骤"><a href="#KNN-算法步骤" class="headerlink" title="KNN 算法步骤"></a>KNN 算法步骤</h2><p>KNN 算法主要分为三步：</p><h3 id="一、准备"><a href="#一、准备" class="headerlink" title="一、准备"></a>一、准备</h3><p>找出邻近值，这个邻近值 k 可以是任意数，1， 1000 甚至 10000 都可以。</p><h3 id="二、分类"><a href="#二、分类" class="headerlink" title="二、分类"></a>二、分类</h3><p>用毕达哥拉斯公式算出该对象与邻近值的相似度（该对象与邻近值得距离），并将该对象归到相似度最高的那一个近邻类里。</p><h3 id="三、回归"><a href="#三、回归" class="headerlink" title="三、回归"></a>三、回归</h3><p>重新找到该对象的近邻，算出这些近邻各特征的平均值，形成新的特征组合，即新的对象，这个对象就是预估的结果，也就是通常所说的预测值。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="KNN-算法的实现"><a href="#KNN-算法的实现" class="headerlink" title="KNN 算法的实现"></a>KNN 算法的实现</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 已知所有特征集合，第一个特征为颜色，第二个特征为所属类别</span></span><br><span class="line">L = &#123;<span class="string">&#x27;orange&#x27;</span> : [<span class="number">1</span>, <span class="number">0</span>], <span class="string">&#x27;apple&#x27;</span>: [<span class="number">2</span>, <span class="number">0</span>], <span class="string">&#x27;flower&#x27;</span>: [<span class="number">1</span>, <span class="number">1</span>], <span class="string">&#x27;fish&#x27;</span>: [<span class="number">5</span>, <span class="number">5</span>]&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 未知物体</span></span><br><span class="line">test = [<span class="number">1.1</span>, <span class="number">0</span>]</span><br><span class="line"><span class="comment"># 所有的相似度集合</span></span><br><span class="line">results = []</span><br><span class="line"><span class="comment"># 已知所有水果的集合</span></span><br><span class="line">items = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> L:</span><br><span class="line">    x = L[item][<span class="number">0</span>] - test[<span class="number">0</span>]</span><br><span class="line">    y = L[item][<span class="number">1</span>] - test[<span class="number">1</span>]</span><br><span class="line">    instance = x ** <span class="number">2</span> + y ** <span class="number">2</span></span><br><span class="line">    results.append(instance ** <span class="number">0.5</span>)</span><br><span class="line">    items.append(item)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 最大相似度</span></span><br><span class="line">minValue = min(results)</span><br><span class="line"><span class="comment"># 物体名称</span></span><br><span class="line">result = items[results.index(minValue)]</span><br><span class="line"></span><br><span class="line">print(minValue, result)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -3145,7 +3145,7 @@
       
         <tags>
             
-            <tag> KNN </tag>
+            <tag> algorithmn </tag>
             
         </tags>
       
@@ -3195,7 +3195,7 @@
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> 系统操作 </tag>
             
         </tags>
       
@@ -3245,7 +3245,7 @@
       
         <tags>
             
-            <tag> 分页 </tag>
+            <tag> algorithmn </tag>
             
         </tags>
       
@@ -3979,31 +3979,6 @@
     
     
     <entry>
-      <title>每周分享第三周（6-8)</title>
-      <link href="/2018/06/08/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%886-8)/"/>
-      <url>/2018/06/08/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%89%E5%91%A8%EF%BC%886-8)/</url>
-      
-        <content type="html"><![CDATA[<h3 id="一、-技术"><a href="#一、-技术" class="headerlink" title="一、 技术"></a>一、 技术</h3><ol><li><p>计算器的四则运算算法,前几天在看自己之前写过的一些小项目，看到了大三写的<a href="https://canace22.github.io/calculate/">简易计算器</a>，主要是实现四则运算和基本的归零操作。大概思路是把整个项目分成两大块，即显示部分和运算部分。首先捕捉鼠标按下的事件，获取按下的值，把数字存到一个 num 数组里，把符号保存到 symbol 数组里。显示部分是以连接 num 数字和 symbol 数字实现的。计算部分是通过边里符号数组，当是某个符号的时候就进行某个运算。比如，遍历到“+”的时候，就把“+”号前后的两个数进行加法操作。一开始这里是有问题的，因为我们的四则运算是遵循先乘除再加减的，所以这里如何保证做到这一点能？我采用的是把乘除的判断放在了加减之前，这样就可以做到了。</p></li><li><p>冒泡算法和快速排序算法怎么解释？用我自己的话来讲，冒泡算法就是就像我们在学校的时候排队，两两对比，个子高的站在前面，个子矮的站在后面，循环进行这种操作，最后就按照从高到矮的顺序排好队了。（当然你也可以从矮到高排的，同理）。快速排序算法就是以中间的同学为基准，两边进行对比，比中间同学高的站左边，比中间同学低的站右边，然后左右分出来的小块再循环进行这种对比，直到排序完成。</p></li></ol><h3 id="二、-笔记"><a href="#二、-笔记" class="headerlink" title="二、 笔记"></a>二、 笔记</h3><ol><li><p><a href="http://canace.site/2018/06/08/sublime-text-nodeJS%E9%85%8D%E7%BD%AE/">Sublime Text3 配置 node.js 环境</a></p></li><li><p><a href="http://canace.site/2018/06/07/%E5%86%99%E7%BB%99%E5%A4%A7%E5%AE%B6%E7%9C%8B%E7%9A%84%E7%AE%97%E6%B3%95%E4%B9%A6%E7%AC%94%E8%AE%B0/"> 写给大家看的算法书笔记</a></p></li><li><p><a href="http://canace.site/2018/06/07/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93%E2%80%94%E2%80%94%E8%AF%BB%E4%B9%A6%E9%83%8E/">前端面试总结——读书郎</a></p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 分享 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>盒模型</title>
       <link href="/2018/06/08/%E7%9B%92%E6%A8%A1%E5%9E%8B/"/>
       <url>/2018/06/08/%E7%9B%92%E6%A8%A1%E5%9E%8B/</url>
@@ -4145,57 +4120,7 @@
       
         <tags>
             
-            <tag> 面试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>每周分享第二周（6.2）</title>
-      <link href="/2018/06/02/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%886-2%EF%BC%89/"/>
-      <url>/2018/06/02/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%BA%8C%E5%91%A8%EF%BC%886-2%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>Tomorrow is another day.</p></blockquote><h3 id="一、-网站"><a href="#一、-网站" class="headerlink" title="一、 网站"></a>一、 网站</h3><ol><li><p>8090，一个免费电影网站，可以免费看挺多高清电影的，不过有人说涉黄的视频也多，这个可以忽略，看自己想看的电影就可以了，免去了下载的流程。</p></li><li><p>鸠摩搜索，一个可以搜索电子书资源 ，并免费下载的网站，看着不错，之前一直用周读下电子书来着，界面还是更喜欢周读，不过这个看着也还行。</p></li><li><p>谷歌翻译 APP，据说可以进行各种语言的实时翻译，解决语言交流障碍问题，从此一部手机，一个 APP 走天下，挺起来还不错的样子。</p></li></ol><h3 id="二、-书籍"><a href="#二、-书籍" class="headerlink" title="二、 书籍"></a>二、 书籍</h3><p>《放弃的艺术》，从心理学的角度探讨如何在适当的时候选择放弃，而不是一味坚持，看似感性，实则理性十足的一本书。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 分享 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>每周分享第一周（5.27）</title>
-      <link href="/2018/05/27/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%885-27%EF%BC%89/"/>
-      <url>/2018/05/27/%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC%E4%B8%80%E5%91%A8%EF%BC%885-27%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<h3 id="一、-网站"><a href="#一、-网站" class="headerlink" title="一、 网站"></a>一、 网站</h3><ol><li><p><a href="http://putlockertv.ws/watch/dKoW20nd-westworld-season-2/episode-3.html">putlockerTV</a> 在找西部世界第二季时接触到的一个视频网站，里面有很多热播的各个国家的电视剧可供免费观看，大部分还有不同语言的字母可选，我自己只看得懂英文，所以在看西部世界时就选的英文字母，体验还不错，果断收藏了。</p></li><li><p><a href="http://setosa.io/ev/markov-chains/">马尔科夫链科普</a>，这篇文章是在阮一峰的每周分享看到的，读起来通俗易懂，还配合了多个动图，觉得写这个网页的人也是牛逼。</p></li><li><p><a href="https://repo.continuum.io/archive/">Anaconda 版本库</a>， 这个网页是在装 tensorflow 时，因为需要 4.2.0 版本，通过官网进来的，里面有 Anaconda 的各个版本可以下载。</p></li></ol><h3 id="二、-书籍"><a href="#二、-书籍" class="headerlink" title="二、 书籍"></a>二、 书籍</h3><ol><li><p><strong>《听见坚冰融化的声音》</strong>，这本书是刚发行的陈佩华老师写的书，主题是一些解毒成功者的故事，关于他们吸毒与原生家庭的关系以及戒毒过程中的故事，故事的叙述比较理性，还穿插了许多心理知识的科普，读来受益匪浅。</p></li><li><p><strong>《大家的日语》</strong>，大概是三月份时候买的书，用来学习日语的课本，一直没怎么翻，周四的时候心血来潮，开始学习，觉得比较像小学时候刚接触语文，给一些句子对话，每篇课文后面是单词表，单靠课本的话学起来比较吃力，还需要一些网上的视频辅助学习，搜了下，发现网易里面路德老师的免费日语教学还可以。</p></li><li><p><strong>《时间效率手册》</strong>，上个月买的书，看了大概三分之一吧，这几天又拾起来看，对于自律性比较差，处于迷茫阶段的我来说，还是不错的一本书，但是受不了里面的鸡血式的写作风格，很容易让人误以为是强鸡汤，令人厌恶，仔细翻翻还是有一定用的感觉。</p></li></ol><h3 id="三、-笔记"><a href="#三、-笔记" class="headerlink" title="三、 笔记"></a>三、 笔记</h3><ol><li><p><a href="http://canace.site/2018/05/27/%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%AD%A5%E9%AA%A4/">Tensorflow 模型训练步骤</a></p></li><li><p><a href="http://canace.site/2018/05/27/ubuntu%E4%B8%8B%E9%85%8D%E7%BD%AEss/">ubuntu 下配置 ss</a></p></li><li><p><a href="http://canace.site/2018/05/27/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85tensorflow/">ubuntu 下 tensorflow CPU release 版安装</a></p></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 随笔 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 分享 </tag>
+            <tag> 经验 </tag>
             
         </tags>
       
