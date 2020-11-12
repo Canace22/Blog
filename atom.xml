@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2020-11-09T09:04:52.356Z</updated>
+  <updated>2020-11-12T01:27:33.925Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS 小技巧</title>
+    <link href="https://canace.site/2020/11/11/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <id>https://canace.site/2020/11/11/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
+    <published>2020-11-11T07:02:22.000Z</published>
+    <updated>2020-11-12T01:27:33.925Z</updated>
+    
+    
+    <summary type="html">本文收录日常开发中一些 css 小技巧。</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="css" scheme="https://canace.site/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>Flow简易教程</title>
@@ -383,25 +402,6 @@
     
     
     <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS 小技巧</title>
-    <link href="https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <id>https://canace.site/2020/08/31/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/</id>
-    <published>2020-08-31T07:02:22.000Z</published>
-    <updated>2020-10-09T12:29:42.825Z</updated>
-    
-    
-    <summary type="html">本文收录日常开发中一些 css 小技巧，包括文本处理、导航栏样式等。</summary>
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="css" scheme="https://canace.site/tags/css/"/>
     
   </entry>
   
