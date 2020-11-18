@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Centos 服务器登录配置</title>
+      <link href="/2020/11/18/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE/"/>
+      <url>/2020/11/18/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%99%BB%E5%BD%95%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、修改服务器-sshd-服务的配置文件"><a href="#一、修改服务器-sshd-服务的配置文件" class="headerlink" title="一、修改服务器 sshd 服务的配置文件"></a>一、修改服务器 sshd 服务的配置文件</h3><p><code>vim /etc/ssh/sshd_config</code> 打开配置文件，修改以下配置项:</p><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">RSAAuthentication</span> <span class="literal">yes</span>     <span class="comment"># RSA认证</span></span><br><span class="line"><span class="string">PubkeyAuthentication</span> <span class="literal">yes</span>  <span class="comment"># 公钥认证</span></span><br><span class="line"><span class="string">AuthorizedKeysFile</span> <span class="string">.ssh/authorized_keys</span>  <span class="comment"># 公钥认证文件路径</span></span><br></pre></td></tr></table></figure><p><code>service sshd restart</code> 重启 sshd 服务</p><h3 id="二、本地生成秘钥"><a href="#二、本地生成秘钥" class="headerlink" title="二、本地生成秘钥"></a>二、本地生成秘钥</h3><p><code>cd ~/.ssh</code> =&gt; <code>ssh-keygen -t rsa</code></p><h3 id="三、把公钥加到服务器的-ssh-authorized-keys-文件中"><a href="#三、把公钥加到服务器的-ssh-authorized-keys-文件中" class="headerlink" title="三、把公钥加到服务器的.ssh/authorized_keys 文件中"></a>三、把公钥加到服务器的.ssh/authorized_keys 文件中</h3><p>(1) 复制公钥文件到服务器 <code>scp local-file &lt;your serve&gt;:taget-dir</code></p><p>(2) 把公钥内容复制到 ~/.ssh/authorized_keys: <code>cat taget-dir/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</code></p><p>(3) 删除刚刚上传的公钥文件: <code>rm taget-dir/id_rsa.pub</code>,这里上传再复制而不是直接用 vim 粘贴，主要是权限问题</p><p>(4) 加权限</p><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">chmod 700 ~/.ssh</span><br><span class="line">chmod 400 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure><h3 id="四、本地定义服务器名称"><a href="#四、本地定义服务器名称" class="headerlink" title="四、本地定义服务器名称"></a>四、本地定义服务器名称</h3><p><code>vim ~/.ssh/config</code> 打开配置文件, 添加以下内容</p><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">Host &lt;hostName&gt;</span><br><span class="line">    HostName &lt;公网ip&gt;</span><br><span class="line">   <span class="built_in"> User </span>root</span><br></pre></td></tr></table></figure><p>保存之后,ssh hostName 就可以登录了</p><h3 id="五、保持连接"><a href="#五、保持连接" class="headerlink" title="五、保持连接"></a>五、保持连接</h3><p><code>vim ~/.ssh/config</code> 打开配置文件, 添加以下内容</p><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">Host</span> <span class="string">*</span></span><br><span class="line">  <span class="attr">ServerAliveInterval</span> <span class="string">60</span></span><br></pre></td></tr></table></figure><p>参考文献:</p><p><a href="https://shanyue.tech/op/init.html#%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%EF%BC%9Apublic-key-%E4%B8%8E-ssh-copy-id">高效简单的服务器登录配置</a></p><p><a href="https://blog.csdn.net/github_35817521/article/details/53458217">如何优雅的登录远程服务器（SSH免密登录）</a></p><p><a href="https://stackoverflow.com/questions/14819084/cant-open-ssh-authorized-keys-of-user">Can’t open ssh/authorized_keys of user</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS 小技巧</title>
       <link href="/2020/11/11/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
       <url>/2020/11/11/CSS-%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
