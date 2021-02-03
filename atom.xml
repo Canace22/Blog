@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2021-01-29T03:45:43.701Z</updated>
+  <updated>2021-02-03T03:52:50.495Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 灵魂拷问</title>
+    <link href="https://canace.site/2021/02/03/JavaScript%E7%81%B5%E9%AD%82%E6%8B%B7%E9%97%AE/"/>
+    <id>https://canace.site/2021/02/03/JavaScript%E7%81%B5%E9%AD%82%E6%8B%B7%E9%97%AE/</id>
+    <published>2021-02-03T03:44:15.000Z</published>
+    <updated>2021-02-03T03:52:50.495Z</updated>
+    
+    
+    <summary type="html">一些有趣的 JavaScript 问题解答</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="JavaScript" scheme="https://canace.site/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>特浓鸡汤</title>
@@ -440,25 +459,6 @@
     
     
     <category term="git" scheme="https://canace.site/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基础 —— 基本数据类型与引用类型的异同</title>
-    <link href="https://canace.site/2020/10/10/javascript%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BC%82%E5%90%8C/"/>
-    <id>https://canace.site/2020/10/10/javascript%E5%9F%BA%E7%A1%80-%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%BC%82%E5%90%8C/</id>
-    <published>2020-10-10T01:49:26.000Z</published>
-    <updated>2021-02-02T00:53:26.706Z</updated>
-    
-    
-    <summary type="html">javascript 基础系列之基本数据类型与引用类型的异同</summary>
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="JavaScript" scheme="https://canace.site/tags/JavaScript/"/>
     
   </entry>
   
