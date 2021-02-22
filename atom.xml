@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2021-02-19T07:43:33.407Z</updated>
+  <updated>2021-02-03T08:41:53.341Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>关于未来工作方向的想法</title>
-    <link href="https://canace.site/2021/02/05/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%90%91%E7%9A%84%E6%83%B3%E6%B3%95/"/>
-    <id>https://canace.site/2021/02/05/%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%90%91%E7%9A%84%E6%83%B3%E6%B3%95/</id>
-    <published>2021-02-05T01:28:32.000Z</published>
-    <updated>2021-02-19T07:43:33.407Z</updated>
-    
-    
-    <summary type="html">一些未来工作方向的想法</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://canace.site/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>JavaScript 灵魂拷问</title>
@@ -457,6 +440,25 @@
     
     
     <category term="http" scheme="https://canace.site/tags/http/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 文档</title>
+    <link href="https://canace.site/2020/10/10/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>https://canace.site/2020/10/10/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2020-10-10T02:48:12.000Z</published>
+    <updated>2020-10-10T02:48:47.337Z</updated>
+    
+    
+    <summary type="html">根据平常经验整理的 git 文档</summary>
+    
+    
+    
+    <category term="项目管理" scheme="https://canace.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="git" scheme="https://canace.site/tags/git/"/>
     
   </entry>
   
