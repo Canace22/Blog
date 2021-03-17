@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Web安全 —— XSS攻击</title>
+      <link href="/2021/03/17/Web%E5%AE%89%E5%85%A8%E2%80%94%E2%80%94xss%E6%94%BB%E5%87%BB/"/>
+      <url>/2021/03/17/Web%E5%AE%89%E5%85%A8%E2%80%94%E2%80%94xss%E6%94%BB%E5%87%BB/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h2><p>XSS(Cross-site scripting) 是一个用来描述一类攻击的术语，它允许攻击者通过网站将客户端脚本注入到其他用户的浏览器中，从而获取用户的 cookie 等信息，盗取用户的钱财或隐私。比如在评论框中输入一段 js 脚本，若该内容未被处理就传给服务端，然后直接显示到页面上，可能就会触发 xss 攻击。</p><p>XSS 的作用机制是恶意代码未经过滤，与网站正常的代码混在一起，浏览器无法分辨哪些脚本是可信的，恶意脚本可以被执行。</p><h2 id="二、分类"><a href="#二、分类" class="headerlink" title="二、分类"></a>二、分类</h2><h3 id="反射型-XSS-攻击"><a href="#反射型-XSS-攻击" class="headerlink" title="反射型 XSS 攻击"></a>反射型 XSS 攻击</h3><p>传递给服务器的用户数据被立即返回并在浏览器中原样显示时发生，这种攻击一般是一次性的。</p><h3 id="持久型-XSS-攻击"><a href="#持久型-XSS-攻击" class="headerlink" title="持久型 XSS 攻击"></a>持久型 XSS 攻击</h3><p>存储在站点中的恶意脚本在用户不知情的情况下执行，再原样地返回给其他用户，这种攻击由于脚本会被服务端存到数据库，以字符串的形式拼接到 html 中，所以是持久的，危害比较大。</p><h2 id="三、XSS-攻击示例"><a href="#三、XSS-攻击示例" class="headerlink" title="三、XSS 攻击示例"></a>三、XSS 攻击示例</h2><h3 id="1、如何攻击直接使用浏览器输入字符串的网页"><a href="#1、如何攻击直接使用浏览器输入字符串的网页" class="headerlink" title="1、如何攻击直接使用浏览器输入字符串的网页"></a>1、如何攻击直接使用浏览器输入字符串的网页</h3><p>规则是下面这样，对这个实例进行攻击，让浏览器执行 <code>prompt(1)</code></p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">escape</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// warm up</span></span><br><span class="line">  <span class="comment">// script should be executed without user interaction</span></span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;&lt;input type=&quot;text&quot; value=&quot;&#x27;</span> + input + <span class="string">&#x27;&quot;&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面的实例很简单，拿到什么就输出什么，未做任何处理，所以可以直接写一段脚本:</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&quot;&gt;<span class="tag">&lt;<span class="name">script</span>&gt;</span>prompt(1);<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>由于实例是直接把输入值拼接到 value 属性中的，所以可以先用 <code>&quot;&gt;</code> 闭合掉属性和标签，然后写入我们的脚本，就可以正常执行了。</p><h3 id="2、网页对输入框字符串做了闭合标签筛选，并且直接使用筛选完的字符串，如何进行攻击"><a href="#2、网页对输入框字符串做了闭合标签筛选，并且直接使用筛选完的字符串，如何进行攻击" class="headerlink" title="2、网页对输入框字符串做了闭合标签筛选，并且直接使用筛选完的字符串，如何进行攻击"></a>2、网页对输入框字符串做了闭合标签筛选，并且直接使用筛选完的字符串，如何进行攻击</h3><p>第二关比较费点脑子，加了个过滤规则，遇到闭合的尖括号就把内容替换为空，也就是上面这种直接写 script 标签的方法行不通了</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">escape</span>(<span class="params">input</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// tags stripping mechanism from ExtJS library</span></span><br><span class="line">  <span class="comment">// Ext.util.Format.stripTags</span></span><br><span class="line">  <span class="keyword">var</span> stripTagsRE = <span class="regexp">/&lt;\/?[^&gt;]+&gt;/gi</span>;</span><br><span class="line">  input = input.replace(stripTagsRE, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;&lt;article&gt;&#x27;</span> + input + <span class="string">&#x27;&lt;/article&gt;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>既然在 script 标签里行不通，那么可以把脚本写在事件里面，比如这样</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">#</span> <span class="attr">onerror</span>=<span class="string">&quot;prompt(1)&quot;</span></span></span><br></pre></td></tr></table></figure><p>以上代码即使不匹配尖括号也能执行，src 引用的图片不存在就会执行 onerror 事件</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">&quot;prompt(1)//&quot;</span></span></span><br></pre></td></tr></table></figure><p>当页面加载完所有的 dom 就会执行 onload，所以上面的代码也能执行</p><h2 id="四、防范方法"><a href="#四、防范方法" class="headerlink" title="四、防范方法"></a>四、防范方法</h2><ul><li>针对使用标签注入代码问题，进行 HTML 转义输入值，比如使用 escapeHTML 转义</li><li>针对链接跳转，建一个白名单，进行内容校验，比如禁止以白名单中的包含值开头<code>[&#39;http&#39;,&#39;https&#39;,&#39;scheme&#39;,&#39;javascript:&#39;,location.href=&quot;xxx&quot;]</code></li><li>前后端分离</li><li>CSP</li><li>输入内容长度控制</li><li>HTTP-only Cookie</li><li>验证码</li></ul><p>参考文档：<br><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a><br><a href="https://tech.meituan.com/2018/09/27/fe-security.html">如何防止 XSS 攻击？</a><br><a href="http://prompt.ml/0">prompt(1) to win</a><br><a href="https://alf.nu/alert1">alert(1) to win</a><br><a href="https://xss-game.appspot.com/">XSS game</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于跨域那些事</title>
       <link href="/2021/03/16/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
       <url>/2021/03/16/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/</url>
@@ -990,31 +1015,6 @@
         <tags>
             
             <tag> css </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Web 安全概述</title>
-      <link href="/2020/08/17/web%E5%AE%89%E5%85%A8/"/>
-      <url>/2020/08/17/web%E5%AE%89%E5%85%A8/</url>
-      
-        <content type="html"><![CDATA[<h3 id="一、是什么"><a href="#一、是什么" class="headerlink" title="一、是什么"></a>一、是什么</h3><p>防止网站受到未授权的访问、使用、修改或者破坏</p><h3 id="二、常见-Web-安全问题"><a href="#二、常见-Web-安全问题" class="headerlink" title="二、常见 Web 安全问题"></a>二、常见 Web 安全问题</h3><p>1、XSS(Cross-site scripting) 攻击</p><p>(1) 是什么</p><p>XSS 是一个用来描述一类攻击的术语，它允许攻击者通过网站将客户端脚本注入到其他用户的浏览器中</p><p>(2) 分类：</p><ul><li><p>反射型 XSS 攻击, 传递给服务器的用户数据被立即返回并在浏览器中原样显示时发生</p></li><li><p>持久型 XSS 攻击,  存储在站点中的恶意脚本在用户不知情的情况下执行，再原样地返回给其他用户</p></li></ul><p>(3) 防范方法</p><p>删除或禁用任何可能包含可运行代码指令的标记</p><p>2、SQL 注入</p><p>(1) 是什么</p><p>恶意用户通过脚本，能够在数据库上执行任意SQL代码，从而允许访问、修改或删除数据</p><p>(2) 发生场景</p><p>传递给底层SQL语句的用户输入可以修改该语句的语义</p><p>3、CSRF (Cross-site request forgery)</p><p>(1) 是什么</p><p>恶意用户通过表单等手段，窃取用户的身份信息，在另一个用户不知情的情况下利用其身份信息执行操作</p><p>(2) 防范方法</p><p>服务器端要求每个 POST 请求都包含一个用户特定的由站点生成的密钥</p><h3 id="三、常见-Web-安全策略"><a href="#三、常见-Web-安全策略" class="headerlink" title="三、常见 Web 安全策略"></a>三、常见 Web 安全策略</h3><p>1、内容安全策略(CSP)</p><p>(1) 是什么</p><p>一个安全层，用于检测并削弱某些特定类型的攻击，比如, 跨站脚本 (XSS) 和数据注入攻击等</p><p>(2)怎么做</p><ul><li><p>客户端, 头部加上 http-equiv=”Content-Security-Policy”, 并添加相应的策略描述， 比如这样</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Security-Policy&quot;</span> <span class="attr">content</span>=<span class="string">&quot;default-src &#x27;self&#x27;; img-src https://*; child-src &#x27;none&#x27;;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>服务端, 返回数据时，http 头部加上 Content-Security-Policy</p></li></ul><p>2、通信安全策略</p><p>(1) 传输层安全协议(TSL)</p><p>(2) HTTPS</p><p>参考文档：</p><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP">内容安全策略( CSP )</a></p><p><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> web安全 </tag>
             
         </tags>
       
