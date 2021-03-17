@@ -36,6 +36,25 @@
   </entry>
   
   <entry>
+    <title>Vscode 简介</title>
+    <link href="https://canace.site/2021/03/17/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/"/>
+    <id>https://canace.site/2021/03/17/%E7%94%A8vscode%E6%90%9E%E4%BA%8B%E6%83%85/</id>
+    <published>2021-03-17T00:44:36.000Z</published>
+    <updated>2021-03-17T06:58:38.896Z</updated>
+    
+    
+    <summary type="html">工欲善其事必先利其器，前端开发工具我用的是 vscode，vscode 有很多快捷的调试方法和一些插件，这里就总结一下这两方面的东西</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="编辑器" scheme="https://canace.site/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于跨域那些事</title>
     <link href="https://canace.site/2021/03/16/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
     <id>https://canace.site/2021/03/16/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/</id>
@@ -432,25 +451,6 @@
     
     
     <category term="静态类型检测" scheme="https://canace.site/tags/%E9%9D%99%E6%80%81%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序小技巧</title>
-    <link href="https://canace.site/2020/11/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/"/>
-    <id>https://canace.site/2020/11/06/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%B8%A9%E5%9D%91/</id>
-    <published>2020-11-06T07:42:48.000Z</published>
-    <updated>2021-02-22T08:00:39.011Z</updated>
-    
-    
-    <summary type="html">这段时间在公司的微信小程序项目，由于项目比较大，也基本涉及到了小程序的很多方面，媒体，网络请求自定义 tabBar 等等，其中遇到了一些坑，也封装了一些东西，在这里记录一下</summary>
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="小程序" scheme="https://canace.site/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
