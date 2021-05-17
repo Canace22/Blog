@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>HTTP 笔记</title>
+      <link href="/http%E7%AC%94%E8%AE%B0/"/>
+      <url>/http%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、HTTP-1-0"><a href="#一、HTTP-1-0" class="headerlink" title="一、HTTP 1.0"></a>一、HTTP 1.0</h2><ol><li><p>每请求一个资源都要新建一个TCP连接，而且是串行请求，性能比较差</p></li><li><p>缓存相关头部：Expires, If-Modified-Since</p></li></ol><h2 id="二、HTTP-1-1"><a href="#二、HTTP-1-1" class="headerlink" title="二、HTTP 1.1"></a>二、HTTP 1.1</h2><ol><li><p>缓存处理，新增 cache control 机制，协商缓存策略新增 Etag/If-none-match和Last-Modified/If-modified-since(If-Unmodified-Since)</p></li><li><p>支持断点续传，请求头引入了range头域，允许只请求资源的某个部分，成功返回的状态码是206</p></li><li><p>错误处理，HTTP1.1 新增24个错误状态响应码，如409（Conflict）表示请求的资源与资源的当前状态发生冲突；410（Gone）表示服务器上的某个资源被永久性的删除</p></li><li><p>支持代理，要求必须有HOST头域，没有Host头域会抛出错误（400 Bad Request），使用HOST 头域的好处是当我们有多个指向同一个IP 的域名时，服务器可以通过这个值去判断我们想要请求的具体是哪一个网站</p></li><li><p>支持长连接和 Pipelining 请求，默认开启 Connection： keep-alive, 这意味着可以在一次连接成功的基础上发送多个请求，解决了 HTTP 1.0 由于 TCP 慢启动带来的性能问题</p></li><li><p>新增 OPTIONS 方法，用于实现 CORS 的请求预检</p></li><li><p>新增 100 状态码，对于大体积文件，不确定服务端能否处理，客户端可以在发送请求实体前, 先发送一个带有 Expect: 100-continue 首部的请求，接收到 100 Continue 响应状态码才继续相关请求</p></li></ol><h2 id="三、HTTP-2-0"><a href="#三、HTTP-2-0" class="headerlink" title="三、HTTP 2.0"></a>三、HTTP 2.0</h2><ol><li><p>采用二进制格式进行协议解析</p></li><li><p>多路复用，一个连接开启多个请求，请求并行执行，弥补了浏览器限制请求数，http 1.1 请求队列阻塞等问题</p></li><li><p>服务端推送，推送请求相关的静态资源，提升页面加载速度</p></li><li><p>header 压缩</p></li><li><p>完全兼容HTTP1.x的语义</p></li></ol><h2 id="四、HTTP-3-0"><a href="#四、HTTP-3-0" class="headerlink" title="四、HTTP 3.0"></a>四、HTTP 3.0</h2><p>使用基于UDP协议的QUIC协议</p><p>参考文献：</p><p><a href="https://juejin.cn/post/6844903489596833800">HTTP1.0、HTTP1.1 和 HTTP2.0 的区别</a></p><p><a href="https://stackoverflow.com/questions/246859/http-1-0-vs-1-1">HTTP 1.0 vs 1.1</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> tag </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我所不知道的 Vue 细节</title>
       <link href="/%E6%88%91%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E7%BB%86%E8%8A%82/"/>
       <url>/%E6%88%91%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84vue%E7%BB%86%E8%8A%82/</url>
@@ -4213,31 +4238,6 @@
         <tags>
             
             <tag> JavaScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Web请求加密</title>
-      <link href="/web%E8%AF%B7%E6%B1%82%E5%8A%A0%E5%AF%86/"/>
-      <url>/web%E8%AF%B7%E6%B1%82%E5%8A%A0%E5%AF%86/</url>
-      
-        <content type="html"><![CDATA[<ol><li>代码：</li></ol><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> CryptoJS <span class="keyword">from</span> <span class="string">&#x27;crypto-js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">ApiSign</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    (<span class="built_in">this</span>.wordMap = &#123;</span><br><span class="line">      <span class="string">&#x27;*&#x27;</span>: <span class="string">&#x27;%2A&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;(&#x27;</span>: <span class="string">&#x27;%28&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;)&#x27;</span>: <span class="string">&#x27;%29&#x27;</span>,</span><br><span class="line">    &#125;),</span><br><span class="line">      (<span class="built_in">this</span>.stdUrlsafe = &#123;</span><br><span class="line">        <span class="string">&#x27;+&#x27;</span>: <span class="string">&#x27;-&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;/&#x27;</span>: <span class="string">&#x27;_&#x27;</span>,</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  encode(str) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">encodeURIComponent</span>(str).replace(<span class="regexp">/[*()]/g</span>, <span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.wordMap[v] || v;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  sign(params) &#123;</span><br><span class="line">    <span class="keyword">const</span> keys = <span class="built_in">Object</span>.keys(params);</span><br><span class="line">    <span class="keyword">if</span> (keys.length === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">&#x27;params empty&#x27;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!params.F_accesstoken) &#123;</span><br><span class="line">      <span class="built_in">console</span>.error(<span class="string">&#x27;F_accesstoken empty&#x27;</span>);</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    keys.sort();</span><br><span class="line">    <span class="keyword">const</span> encryptStr = keys</span><br><span class="line">      .map(<span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> [<span class="built_in">this</span>.encode(v), <span class="string">&#x27;=&#x27;</span>, <span class="built_in">this</span>.encode(params[v])].join(<span class="string">&#x27;&#x27;</span>);</span><br><span class="line">      &#125;)</span><br><span class="line">      .join(<span class="string">&#x27;&amp;&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="string">&#x27;01&#x27;</span> +</span><br><span class="line">      CryptoJS.HmacSHA1(encryptStr, params.F_accesstoken)</span><br><span class="line">        .toString(CryptoJS.enc.Base64)</span><br><span class="line">        .replace(<span class="regexp">/[+/]/g</span>, <span class="function"><span class="params">v</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="built_in">this</span>.stdUrlsafe[v] || v;</span><br><span class="line">        &#125;)</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apiSign = <span class="keyword">new</span> ApiSign();</span><br><span class="line"><span class="keyword">export</span> &#123; apiSign &#125;;</span><br></pre></td></tr></table></figure><ol><li>使用方法</li></ol><ul><li>安装 <a href="https://www.npmjs.com/package/crypto-js">crypto-js</a></li><li><p>使用示例：</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; apiSign &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/sign.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> params = &#123;&#125;;</span><br><span class="line">params.F_sign = apiSign.sign(params);</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> web </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> http </tag>
             
         </tags>
       
