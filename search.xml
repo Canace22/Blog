@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>实现数组拍平</title>
+      <link href="/%E5%AE%9E%E7%8E%B0%E6%95%B0%E7%BB%84%E6%8B%8D%E5%B9%B3/"/>
+      <url>/%E5%AE%9E%E7%8E%B0%E6%95%B0%E7%BB%84%E6%8B%8D%E5%B9%B3/</url>
+      
+        <content type="html"><![CDATA[<p>有一个深层嵌套的数组，需要输出拍平后的新数组</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> input = [<span class="number">1</span>, [<span class="number">2</span>, [<span class="number">3</span>, <span class="number">4</span>], [<span class="number">5</span>], [<span class="number">6</span>]]];</span><br><span class="line"><span class="keyword">const</span> output = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br></pre></td></tr></table></figure><h2 id="实现方案-1：flat"><a href="#实现方案-1：flat" class="headerlink" title="实现方案 1：flat"></a>实现方案 1：flat</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> output = input.flat(<span class="literal">Infinity</span>);</span><br></pre></td></tr></table></figure><p>这里为什么用无穷大呢，因为有的时候可能嵌套很深，我们没有精力去数，为了保证都能被打平，用一个最大的数字。</p><h2 id="方案-2：递归"><a href="#方案-2：递归" class="headerlink" title="方案 2：递归"></a>方案 2：递归</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flat</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> retVal = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(arr[i])) &#123;</span><br><span class="line">      retVal = retVal.concat(flat(arr[i]));</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      retVal.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> retVal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> output = flat(input);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTTP 笔记</title>
       <link href="/http%E7%AC%94%E8%AE%B0/"/>
       <url>/http%E7%AC%94%E8%AE%B0/</url>
