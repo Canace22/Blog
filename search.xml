@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>解决 Github Dns 污染问题</title>
+      <link href="/%E8%A7%A3%E5%86%B3github-dns%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/"/>
+      <url>/%E8%A7%A3%E5%86%B3github-dns%E6%B1%A1%E6%9F%93%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>最近 github 老是抽风，打不开，排查了一番，发现电脑端开启代理的 pac 模式就会出现这个问题，全局模式和不开代理是没问题的。手机端连了公司的 wifi 会打不开，不连 wifi 打得开，目测是 dns 被污染了。</p><p>解决方法就是去网上用 ping 工具 ping 一下 github 域名，看看哪些能用，然后在本地再 ping 一下，ok 的话就去 host 文件里面配置一下 github 的 ip 为刚刚测试的可用 ip。</p><p>操作步骤如下：</p><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">获取可用 ip</span><br><span class="line"></span><br><span class="line">打开 host 文件</span><br><span class="line">sudo vi /etc/hosts</span><br><span class="line"></span><br><span class="line">修改 github 域名指向的 ip</span><br><span class="line">140.82.112.4    github.com</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> http </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Lodash 源码解析 —— Slice</title>
       <link href="/lodash%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E2%80%94%E2%80%94array-slice/"/>
       <url>/lodash%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E2%80%94%E2%80%94array-slice/</url>
