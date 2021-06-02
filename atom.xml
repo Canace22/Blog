@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2021-05-22T04:13:43.428Z</updated>
+  <updated>2021-06-02T04:41:24.998Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>setTimeout 模拟 setInterval</title>
+    <link href="https://canace.site/setTimeout%E6%A8%A1%E6%8B%9FsetInterval/"/>
+    <id>https://canace.site/setTimeout%E6%A8%A1%E6%8B%9FsetInterval/</id>
+    <published>2021-06-02T02:53:20.000Z</published>
+    <updated>2021-06-02T04:41:24.998Z</updated>
+    
+    
+    <summary type="html">本文主要讲一下为什么要用 setTimeout 去模拟 setInterval，以及如何实现</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="JavaScript" scheme="https://canace.site/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>解决 Github Dns 污染问题</title>
@@ -46,7 +65,7 @@
     <link href="https://canace.site/lodash%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E2%80%94%E2%80%94array-slice/"/>
     <id>https://canace.site/lodash%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90%E2%80%94%E2%80%94array-slice/</id>
     <published>2021-05-21T03:15:40.000Z</published>
-    <updated>2021-05-21T04:07:48.884Z</updated>
+    <updated>2021-05-24T01:38:57.078Z</updated>
     
     
     <summary type="html">lodash slice 函数学习</summary>
@@ -430,25 +449,6 @@
     
     
     <category term="web安全" scheme="https://canace.site/tags/web%E5%AE%89%E5%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>认识 Cookie</title>
-    <link href="https://canace.site/%E8%AE%A4%E8%AF%86Cookie/"/>
-    <id>https://canace.site/%E8%AE%A4%E8%AF%86Cookie/</id>
-    <published>2021-03-25T03:15:26.000Z</published>
-    <updated>2021-03-27T06:45:16.146Z</updated>
-    
-    
-    <summary type="html">说说 Cookie 相关知识</summary>
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="http" scheme="https://canace.site/tags/http/"/>
     
   </entry>
   
