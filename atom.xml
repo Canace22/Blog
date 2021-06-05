@@ -6,7 +6,7 @@
   <link href="https://canace.site/atom.xml" rel="self"/>
   
   <link href="https://canace.site/"/>
-  <updated>2021-06-04T08:21:37.383Z</updated>
+  <updated>2021-06-05T09:20:33.609Z</updated>
   <id>https://canace.site/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS 常用布局及解决方案</title>
+    <link href="https://canace.site/css%E5%B8%83%E5%B1%80%E7%AF%87/"/>
+    <id>https://canace.site/css%E5%B8%83%E5%B1%80%E7%AF%87/</id>
+    <published>2021-06-05T02:45:33.000Z</published>
+    <updated>2021-06-05T09:20:33.609Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;CSS 常用布局包括元素的水平、垂直居中，单栏布局、三栏布局等，本文分析多种情况下的布局方案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="web" scheme="https://canace.site/categories/web/"/>
+    
+    
+    <category term="css" scheme="https://canace.site/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>我辞职了</title>
@@ -415,25 +434,6 @@
     
     
     <category term="algorithmn" scheme="https://canace.site/tags/algorithmn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS 常用布局及解决方案</title>
-    <link href="https://canace.site/css%E5%B8%83%E5%B1%80%E7%AF%87/"/>
-    <id>https://canace.site/css%E5%B8%83%E5%B1%80%E7%AF%87/</id>
-    <published>2021-04-02T02:45:33.000Z</published>
-    <updated>2021-04-04T06:57:34.432Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;css 基本布局介绍，包括元素的水平、垂直居中，单列布局、三列布局等，文章分析了多种情况下的布局方案。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="web" scheme="https://canace.site/categories/web/"/>
-    
-    
-    <category term="css" scheme="https://canace.site/tags/css/"/>
     
   </entry>
   
