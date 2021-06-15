@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>修改自动填充样式</title>
+      <link href="/%E4%BF%AE%E6%94%B9%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E6%A0%B7%E5%BC%8F/"/>
+      <url>/%E4%BF%AE%E6%94%B9%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E6%A0%B7%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<p>在 WebKit 内核的浏览器中，当用户的设置中允许表单自动填充，填充后有一个背景颜色，打开控制台的 styles 看到 input:-internal-autofill-selected 设置了背景色和字体颜色，大喜。在 css 中改完发现无效，明明看到覆盖掉了这个的样式，怎么还是有背景色呢？</p><p>看到 css-tricks 上的一篇文章，说这个填充的背景样式是由 -webkit-autofill 这个伪类控制的,而填充背景色则是由 -webkit-box-shadow 属性控制的，下面来看看修改填充样式的一个 demo</p><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-webkit-autofill</span>,</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:focus</span>,</span><br><span class="line"><span class="selector-tag">textarea</span><span class="selector-pseudo">:-webkit-autofill</span>,</span><br><span class="line"><span class="selector-tag">textarea</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-tag">textarea</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:focus</span>,</span><br><span class="line"><span class="selector-tag">select</span><span class="selector-pseudo">:-webkit-autofill</span>,</span><br><span class="line"><span class="selector-tag">select</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-tag">select</span><span class="selector-pseudo">:-webkit-autofill</span><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">-webkit-text-fill-color</span>: <span class="number">#333333</span>;</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0px</span> <span class="number">1000px</span> <span class="number">#fff</span> inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>完美，自动填充的样式被修改为我想要的样子了。这里要说一下我为什么非得修改这个自动填充的样式呢？我们知道同样是 webkit 内核，在不同浏览器上，自定义的行为可能是不一样的，也许这个浏览器的自动填充背景色是这个颜色，另一个浏览器想彰显个性就表现不一样了。而对于程序来说，不可控的因素是致命的，我想要我的页面在不同情况下表现能一致。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>禁止图片拖动</title>
       <link href="/%E7%A6%81%E6%AD%A2%E5%9B%BE%E7%89%87%E6%8B%96%E5%8A%A8/"/>
       <url>/%E7%A6%81%E6%AD%A2%E5%9B%BE%E7%89%87%E6%8B%96%E5%8A%A8/</url>
