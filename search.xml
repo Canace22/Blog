@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>nodeJs 模块机制</title>
+      <link href="/nodeJs%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/"/>
+      <url>/nodeJs%E6%A8%A1%E5%9D%97%E6%9C%BA%E5%88%B6/</url>
+      
+        <content type="html"><![CDATA[<p>在讲模块机制之前，先来说说 CommonJs 规范，我们知道在打包的时候经常会看到 cjs 这个选项，这里的 cjs，我自己之前是一直以为就是commonJs，实际上这是 node 对 CommonJs 的实现，是 node 的模块机制。</p><p>ComonJs 规范范围除了模块规范之外，还有二进制、Buffer、字符集编码、I/O 流、进程环境、文件系统、套接字、单元测试、Web 服务器网关接口以及包管理等规范。</p><p>既然 node 模块机制是 CommonJs 的一种实现，那么 CommonJs 的模块规范是怎样的呢？CommonJs 的模块规范主要做了如下定义：</p><p><strong>模块引用</strong>：通过 require 引入模块</p><p><strong>模块定义</strong>：module 对象代表模块自身，通过 exports 属性导出当前模块的变量或对象</p><p><strong>模块标识</strong>：必须是符合小驼峰命名的字符串，或者是文件路径（相对路径、绝对路径）</p><p>接下来讲讲 nodeJs 的模块机制是怎么实现的，当我们用 require 引入某个模块时，会经历以下三个过程：路径分析，文件定位以及编译执行。再来讲讲每个步骤分别发生了什么。</p><p><strong>路径分析</strong></p><ul><li><p>核心模块，加载速度快，加载优先级仅次于缓存加载</p></li><li><p>路径形式的文件模块：把路径转换为真实路径</p></li><li><p>自定义模块：沿当前路径往上逐级递归查找，最深可以查找到根目录下的 node_modules，由于路径查找速度比较慢，所以加载速度也会比较慢</p></li></ul><p>基于以上因素，为提高模块加载速度，在模块引入时，引入顺序应该为：核心模块 -&gt; 路径形式的文件模块 -&gt; 第三方模块</p><p><strong>文件定位</strong></p><ul><li><p>模块标识不含文件扩展名，按照 .js，.json，.node 的优先级补充扩展名，该过程是阻塞式的引入，因此 .json, .node 文件带上扩展名，可以加快加载速度</p></li><li><p>若模块标识不是文件名，查找当前目录下的 package.json 文件，把 main 属性的值作为文件路径进行定位</p></li><li><p>若当前目录下不存在 package.json 文件，把模块标识当成一个目录名称，将 index 作为模块默认文件名，找不到模块会抛出查找失败错误    </p></li></ul><p><strong>编译执行</strong></p><ul><li>新建模块对象，模块对象的定义如下           </li></ul><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Module</span>(<span class="params">id, parent</span>) </span>&#123; </span><br><span class="line">  <span class="built_in">this</span>.id = id;</span><br><span class="line">  <span class="built_in">this</span>.exports = &#123;&#125;; </span><br><span class="line">  <span class="built_in">this</span>.parent = parent;</span><br><span class="line">  <span class="keyword">if</span> (parent &amp;&amp; parent.children) &#123;</span><br><span class="line">    parent.children.push(<span class="built_in">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">this</span>.filename = <span class="literal">null</span>; </span><br><span class="line">  <span class="built_in">this</span>.loaded = <span class="literal">false</span>; </span><br><span class="line">  <span class="built_in">this</span>.children = [];</span><br><span class="line">  <span class="built_in">this</span>.paths = []</span><br><span class="line">  <span class="built_in">this</span>.path = <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>根据路径载入文件并编译，不同文件的载入方式不同</p><ul><li><p>.js 文件通过 fs 模块同步读取后编译</p></li><li><p>.node 文件通过 dlopen 方法加载编译后的二进制文件</p></li><li><p>.json 文件，通过 fs 模块同步读取后，使用 JSON.parse 解析返回结果</p></li><li><p>其他都按 .js 文件载入</p></li></ul></li><li><p>编译成功的文件模块，以文件路径为索引，缓存到 Module._cache 对象上，核心模块缓存到 NativeModule._cache对象上</p></li></ul><p>参考文献：</p><p>深入浅出 nodeJs</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> nodeJs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>离开页面弹窗</title>
+      <link href="/%E7%A6%BB%E5%BC%80%E9%A1%B5%E9%9D%A2%E5%BC%B9%E7%AA%97/"/>
+      <url>/%E7%A6%BB%E5%BC%80%E9%A1%B5%E9%9D%A2%E5%BC%B9%E7%AA%97/</url>
+      
+        <content type="html"><![CDATA[<p>最近有个需求，要求在部署过程中离开界面与用户有一个交互，询问用户是否离开页面，然后还给出了相应的样式让我实现。我寻思着关闭窗口，意味着页面销毁，执行栈都不存在了，何谈交互呢？于是我果断的拒绝了这个需求，并评论道无法实现。</p><p>后来跟同事交流了一下，同事说之前遇到过类似的需求，有相应的回调函数可以做到，去 mdn 找了下，还真有，但是很遗憾，不能自定义样式，而且在不同的浏览器可能表现不一致。跟产品沟通了下，说明了这种情况，能接受，就加上了。</p><p>实现离开页面弹窗交互利用的是 window 的一个事件 onbeforeunload，在回调里面返回值，点击窗口的关闭就会弹窗，示例如下：</p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">window</span>.onbeforeunload = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> event = e || <span class="built_in">window</span>.event;</span><br><span class="line">  <span class="keyword">const</span> tips = <span class="string">&#x27;关闭网页&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (event) &#123;</span><br><span class="line">    event.returnValue = tips;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> tips;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>参考文档：</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event">Window: beforeunload event</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2021 生日寄语</title>
       <link href="/2021%E7%94%9F%E6%97%A5%E5%AF%84%E8%AF%AD/"/>
       <url>/2021%E7%94%9F%E6%97%A5%E5%AF%84%E8%AF%AD/</url>
@@ -327,7 +377,7 @@
       
         <tags>
             
-            <tag> tag </tag>
+            <tag> http </tag>
             
         </tags>
       
